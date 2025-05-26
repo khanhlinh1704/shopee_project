@@ -1,0 +1,394 @@
+
+/* Footer Shopee */
+.footer-section {
+  margin-top: 40px;
+  padding: 40px 0 24px 0;
+  background: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #222;
+  border-top: 1px solid #eaeaea;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* main bar */
+.footer-col {
+  flex: none;
+}
+
+.footer-col:nth-child(1),
+.footer-col:nth-child(2) {
+  width: 200px;
+}
+
+.footer-col:nth-child(3) {
+  width: 290px;
+}
+
+.footer-col:nth-child(4) {
+  width: 210px;
+}
+
+/* title bar */
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+/* conection list */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.footer-col ul li a {
+  color: #555;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: #ee4d2d;
+}
+
+/* Icon  */
+.footer-col ul li i {
+  font-size: 16px;
+  width: 20px;
+  margin-right: 6px;
+  color: #555;
+}
+
+/* payment & shipping */
+.payment-icons,
+.shipping-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-bottom: 16px;
+}
+
+.payment-icons img,
+.shipping-icons img {
+  height: 26px;
+  width: 60px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid #ececec;
+  padding: 3px;
+  background: #fff;
+}
+
+.shipping-icons img {
+  width: 88px;
+}
+
+/* QR & App Store */
+.app-download {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.app-download .qr {
+  width: 90px;
+  height: 90px;
+  border-radius: 4px;
+  border: 1px solid #ececec;
+  background: #fff;
+  object-fit: cover;
+}
+
+.app-download .app-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.app-download .app-icons img {
+  height: 28px;
+  width: 110px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ececec;
+  padding: 3px 6px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 16px;
+  }
+
+  .footer-col {
+    width: 100% !important;
+  }
+
+  .payment-icons,
+  .shipping-icons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .app-download {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+
+
+
+/* General styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Navbar styles */
+.login-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 180px;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  height: 100px;
+  padding-bottom: 30px
+}
+
+.login-navbar__left {
+  display: flex;
+  align-items: center;
+}
+
+.login-navbar__left i {
+  font-size: 30px;
+  color: #ee4d2d;
+  margin-right: 10px;
+}
+
+.navbar-title {
+  font-size: 30px;
+  font-weight: 500;
+  color: #333;
+}
+
+.navbar-login {
+  margin-left: 10px;
+  font-size: 35px;
+  color: #ee4d2d;
+}
+
+.login-navbar__right .navbar-help {
+  font-size: 14px;
+  color: #ee4d2d;
+  text-decoration: none;
+}
+
+/* Main login section */
+.login-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #ee4d2d;
+  color: #fff;
+  padding-bottom: 100px;
+  margin-bottom: 40px;
+}
+
+.login-main__left {
+  text-align: center;
+  margin-right: 100px;
+}
+
+.login-logo i {
+  font-size: 300px;
+  color: #fff;
+}
+
+.login-brand {
+  font-size: 100px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.login-slogan {
+  font-size: 30px;
+  margin-top: 50px;
+  line-height: 1.5;
+}
+
+.login-main__right {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 405px;
+  height: 475px;
+  margin-left: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.login-form-header span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.login-qr-btn {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #ee4d2d;
+  cursor: pointer;
+}
+
+.login-qr-icon i {
+  margin-left: 5px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.login-password-wrap {
+  position: relative;
+}
+
+.login-eye {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ccc;
+}
+
+.login-btn {
+  background-color: #ee4d2d;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.login-btn:hover {
+  background-color: #d9441f;
+}
+
+.login-form-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.login-form-links a {
+  color: #ee4d2d;
+  text-decoration: none;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.login-divider span {
+  margin: 0 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.login-divider span:first-child,
+.login-divider span:last-child {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.login-socials {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.login-social {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.login-social.facebook {
+  background-color: #3b5998;
+  margin-right: 10px;
+}
+
+.login-social.google {
+  background-color: #db4437;
+}
+
+.login-register {
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-register a {
+  color: #ee4d2d;
+  text-decoration: none;
+}

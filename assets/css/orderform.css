@@ -1,0 +1,583 @@
+
+
+/* Order*/
+/* Container for order status */
+.order-status {
+  margin-left: 278px; 
+  margin-right: 90px;
+  margin-top: 38px; 
+  background-color: #fff;
+  padding: 16px ;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs container */
+.order-status-tabs {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* Individual tab */
+.order-status-tab {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.order-status-tab.active {
+  color: #d0011b;
+  font-weight: bold;
+}
+
+.order-status-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #d0011b;
+}
+
+/* Count badge */
+.order-status-count {
+  color: #d0011b;
+  font-weight: bold;
+}
+
+/* Search bar */
+.order-search {
+  margin-top: 16px;
+}
+
+.order-search-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #666;
+}
+
+.order-search-input::placeholder {
+  color: #aaa;
+}
+
+
+/*ordrerform_past*/
+/* Order card container */
+.order-card {
+  margin-top: 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 90px;
+  margin-left: 278px; 
+  padding: 16px 20px;
+}
+
+/* Order header */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.shop-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shop-info .shop-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.chat-btn {
+  background-color: #fff;
+  color: #d0011b;
+  border: 1px solid #d0011b;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.chat-btn i {
+  margin-right: 4px;
+}
+
+.chat-btn:hover {
+  background-color: #d0011b;
+  color: #fff;
+}
+
+.view-shop {
+  font-size: 12px;
+  color: #d0011b;
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+.order-status_product {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.order-status_product .success {
+  color: #28a745;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.order-status_product .pending {
+  color: #d0011b;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Order body */
+.order-body {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.product {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+}
+
+.product-img img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.product-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.product-type,
+.product-qty {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Product price */
+.product-price {
+  flex: 1; 
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; 
+  align-items: center;
+  gap: 8px 
+}
+
+.product-price .old-price {
+  font-size: 12px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.product-price .new-price {
+  font-size: 14px;
+  color: #d0011b;
+  font-weight: bold;
+}
+
+/* Order footer */
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.total-label {
+  font-size: 14px;
+  color: #333;
+}
+
+.total-price {
+  font-size: 16px;
+  color: #d0011b;
+  font-weight: bold;
+}
+
+/* Order actions */
+.order-actions .note {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-buttons .btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.action-buttons .btn.confirm {
+  background-color: #d0011b;
+  color: #fff;
+}
+
+.action-buttons .btn.outline {
+  background-color: #fff;
+  color: #d0011b;
+  border: 1px solid #d0011b;
+}
+
+.action-buttons .btn:hover {
+  opacity: 0.9;
+}
+
+/* Footer section Shopee style */
+.footer-section {
+  margin-top: 40px;
+  padding: 40px 0 24px 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #222;
+  border-top: 1px solid #eaeaea;
+  margin-left: 278px;
+  margin-right: 90px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* main bar */
+.footer-col {
+  flex: none;
+}
+
+.footer-col:nth-child(1),
+.footer-col:nth-child(2) {
+  width: 200px;
+}
+
+.footer-col:nth-child(3) {
+  width: 290px;
+}
+
+.footer-col:nth-child(4) {
+  width: 210px;
+}
+
+/* title bar */
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+/* conection list */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.footer-col ul li a {
+  color: #555;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: #ee4d2d;
+}
+
+/* Icon  */
+.footer-col ul li i {
+  font-size: 16px;
+  width: 20px;
+  margin-right: 6px;
+  color: #555;
+}
+
+/* payment & shipping */
+.payment-icons,
+.shipping-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-bottom: 16px;
+}
+
+.payment-icons img,
+.shipping-icons img {
+  height: 26px;
+  width: 60px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid #ececec;
+  padding: 3px;
+  background: #fff;
+}
+
+.shipping-icons img {
+  width: 88px;
+}
+
+/* QR & App Store */
+.app-download {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.app-download .qr {
+  width: 90px;
+  height: 90px;
+  border-radius: 4px;
+  border: 1px solid #ececec;
+  background: #fff;
+  object-fit: cover;
+}
+
+.app-download .app-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.app-download .app-icons img {
+  height: 28px;
+  width: 110px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ececec;
+  padding: 3px 6px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 16px;
+  }
+
+  .footer-col {
+    width: 100% !important;
+  }
+
+  .payment-icons,
+  .shipping-icons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .app-download {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+/* Footer section Shopee style */
+.footer-section {
+  margin-top: 40px;
+  padding: 40px 0 24px 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #222;
+  border-top: 1px solid #eaeaea;
+  margin-left: 38px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* main bar */
+.footer-col {
+  flex: none;
+}
+
+.footer-col:nth-child(1),
+.footer-col:nth-child(2) {
+  width: 200px;
+}
+
+.footer-col:nth-child(3) {
+  width: 290px;
+}
+
+.footer-col:nth-child(4) {
+  width: 210px;
+}
+
+/* title bar */
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+/* conection list */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.footer-col ul li a {
+  color: #555;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: #ee4d2d;
+}
+
+/* Icon  */
+.footer-col ul li i {
+  font-size: 16px;
+  width: 20px;
+  margin-right: 6px;
+  color: #555;
+}
+
+/* payment & shipping */
+.payment-icons,
+.shipping-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-bottom: 16px;
+}
+
+.payment-icons img,
+.shipping-icons img {
+  height: 26px;
+  width: 60px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid #ececec;
+  padding: 3px;
+  background: #fff;
+}
+
+.shipping-icons img {
+  width: 88px;
+}
+
+/* QR & App Store */
+.app-download {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.app-download .qr {
+  width: 90px;
+  height: 90px;
+  border-radius: 4px;
+  border: 1px solid #ececec;
+  background: #fff;
+  object-fit: cover;
+}
+
+.app-download .app-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.app-download .app-icons img {
+  height: 28px;
+  width: 110px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ececec;
+  padding: 3px 6px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 16px;
+  }
+
+  .footer-col {
+    width: 100% !important;
+  }
+
+  .payment-icons,
+  .shipping-icons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .app-download {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
