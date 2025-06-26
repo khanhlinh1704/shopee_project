@@ -1,0 +1,256 @@
+
+
+.header-container {
+    background-color: #fff;
+    height: 38px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.header-content i.fa-solid.fa-shop {
+    color: #ee4d2d; 
+    font-size: 18px; 
+    margin-right: 8px; 
+}
+
+.header-title {
+    font-size: 14px;
+    color: #333;
+    flex-grow: 1;
+}
+
+.user-info {
+    position: relative;
+    cursor: pointer;
+}
+
+.username {
+    font-size: 14px;
+    color: #333;
+    margin-right: 5px;
+}
+
+.fa-chevron-down {
+    font-size: 12px;
+    color: #333;
+}
+.shopee-text {
+    color: #ee4d2d; 
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 600px;
+    height: 600px;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.content-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.main-image {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.text-content h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.start-btn {
+    background-color: #ee4d2d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.start-btn:hover {
+    background-color: #d8431a;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    height: 100vh;
+}
+
+.sidebar-item {
+    margin-bottom: 50px;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-item i {
+    font-size: 20px;
+    color: #ee4d2d;
+    transition: color 0.3s ease;
+}
+
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #ee4d2d;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+.sidebar-item:hover {
+    transform: scale(1.2);
+}
+ /*Main infor*/
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step {
+    font-size: 14px;
+    color: #999;
+    position: relative;
+}
+
+.step.active {
+    font-weight: bold;
+    color: black;
+}
+
+.form-container {
+   display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    text-align: left; 
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
+    margin-bottom: 20px; 
+    margin-right: 50px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+    flex: 1;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+input[readonly] {
+    background-color: #f5f5f5;
+}
+
+.char-count {
+    font-size: 12px;
+    color: #999;
+    float: right;
+}
+
+.add-btn {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.save-btn {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.next-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ee4d2d;
+    color: #fff;
+    cursor: pointer;
+}
