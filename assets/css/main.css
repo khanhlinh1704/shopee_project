@@ -13,11 +13,11 @@
     box-sizing: border-box;
 }
 .header-with-search {
-    padding-left: 134px;
-    padding-right: 134px;
-    box-sizing: border-box;
-
+    padding-left: 100px;
+    padding-right: 100px;
+    
 }
+
 .header__navbar-list{
     list-style: none; 
     display: flex;
@@ -165,7 +165,6 @@
     position: relative;
     display: inline-flex;
     align-items: center;
-   
     margin-right: 16px;
 }
 
@@ -240,7 +239,7 @@ margin-right: 11px;
     animation: headerNotifyGrowth ease-in 0.2s;
     will-change: opacity, transform;
     display: none;
-    z-index: 2;
+    z-index: 3;
 }
 .header__notify::before{
     content: "";
@@ -471,16 +470,22 @@ font-weight: 400;
     border-radius: 2px;
     display: flex;
     align-items: center;
+    overflow: visible;
 
 }
 .header__search-suggestion {
     margin-top: 4px;
-    font-size: 15px;
+    font-size: 17px;
     color: #fff;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     padding-left: 8px;
+    max-width: none;
+    width: 100%;
+    overflow: visible;         
+    position: static;      
+    z-index: 2;
 }
 
 .header__search-suggestion a {
@@ -529,7 +534,7 @@ font-weight: 400;
     /* display: none; */
     cursor: default;
     display: none;
-    z-index: 2;
+    z-index: 3;
 }
 .header__cart-list::after{
     content: "";
@@ -1103,6 +1108,7 @@ a{
     cursor: pointer;
     font-size: .875rem;
     line-height: 1.2;
+    transition: transform 0.2s ease;
 }
 
 .icon-link {
@@ -1132,17 +1138,10 @@ a{
 }
 /* Hover Effect */
 .icon-item:hover {
-    transform: scale(1.1); /* Slightly enlarge the item */
+    transform: translateY(-1px);
 }
 
-.icon-link:hover {
-    color: #ff5722; /* Change icon color on hover */
-    transform: scale(1.2); /* Slightly enlarge the icon */
-}
 
-.icon-item:hover p {
-    color: #ff5722; /* Change text color on hover */
-}
 
 /*Left&right Banner, below-banner */
 .banner,
@@ -1869,11 +1868,47 @@ ul {
 }
 
 /* Text under item */
+.mall-hotdeal-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.mall-hotdeal-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 10px;
+}
+
 .mall-hotdeal-desc {
   font-size: 12px;
   color: #d0011b;
   font-weight: 500;
 }
+.mall-hotdeal-deals-wrapper {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+.mall-deal-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #555;
+}
+
+.mall-deal-btn.prev-deal { left: 5px; }
+.mall-deal-btn.next-deal { right: 5px; }
 /*top search bar*/
 .top-search-section {
   display: flex;
@@ -1905,6 +1940,10 @@ ul {
   color: #ff6b4a;
 }
 /* top search items*/
+.outer-container{
+    margin-bottom: 10px;
+    
+}
 .carousel-container-bar {
   width: 1200px;
   margin: 0 auto;
@@ -1921,14 +1960,16 @@ ul {
   min-width: 180px;
   text-align: center;
   position: relative;
-  padding: 10px;
+  padding: 2px;
   border-radius: 4px;
   transition: all 0.3s ease;
+   
 }
 
 .product-item:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(-3px);
+  border-color: #F45B37;
 }
 
 .product-top {
@@ -2012,6 +2053,7 @@ ul {
   font-family: inherit;
   transition: background 0.2s;
 }
+
 
 .view-more-btn:hover {
   background: #f5f5f5;

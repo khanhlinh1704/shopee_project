@@ -86,44 +86,62 @@ document.querySelector('.banner-arrow.next').addEventListener('click', nextBanne
 
 // Khởi tạo banner
 updateBanner();
+//Flashsale
+document.addEventListener("DOMContentLoaded", () => {
+    const listWrapper = document.querySelector(".flash-sale-list");
+    const cards = document.querySelectorAll(".flash-sale-card");
+    const cardWidth = cards[0].offsetWidth + 8; 
+    const visibleCards = 6; 
+    const totalCards = cards.length;
 
-// Flash Sale Carousel dạng trượt
-let flashsaleIndex = 0;
-const flashsaleList = document.querySelector('.flashsale-list');
-const flashsaleItems = document.querySelectorAll('.flashsale-item');
-const flashsalePerPage = 6;
-const flashsaleTotal = flashsaleItems.length;
-const maxFlashsaleIndex = Math.ceil(flashsaleTotal / flashsalePerPage) - 1;
+    let currentIndex = 0;
 
-function updateFlashsale() {
-    const offset = -flashsaleIndex * 100;
-    flashsaleList.style.transform = `translateX(${offset}%)`;
-
-    // Ẩn/hiện nút
-    const prevBtn = document.querySelector('.flashsale-arrow.prev');
-    const nextBtn = document.querySelector('.flashsale-arrow.next');
-    prevBtn.style.display = flashsaleIndex === 0 ? 'none' : 'flex';
-    nextBtn.style.display = flashsaleIndex === maxFlashsaleIndex ? 'none' : 'flex';
-}
-
-function prevFlashsale() {
-    if (flashsaleIndex > 0) {
-        flashsaleIndex--;
-        updateFlashsale();
+    function updateCarousel() {
+        const offset = cardWidth * currentIndex;
+        listWrapper.style.transform = `translateX(-${offset}px)`;
     }
-}
 
-function nextFlashsale() {
-    if (flashsaleIndex < maxFlashsaleIndex) {
-        flashsaleIndex++;
-        updateFlashsale();
-    }
-}
+    window.prevFlashSale = () => {
+        currentIndex = 0;
+        updateCarousel();
+    };
 
-const flashsalePrevBtn = document.querySelector('.flashsale-arrow.prev');
-const flashsaleNextBtn = document.querySelector('.flashsale-arrow.next');
-if (flashsalePrevBtn) flashsalePrevBtn.addEventListener('click', prevFlashsale);
-if (flashsaleNextBtn) flashsaleNextBtn.addEventListener('click', nextFlashsale);
+    window.nextFlashSale = () => {
+        
+        if (currentIndex + visibleCards < totalCards) {
+            currentIndex += visibleCards;
+        } else {
+           
+            currentIndex = totalCards - visibleCards;
+        }
+        updateCarousel();
+    };
+});
+//shopee mall
+document.addEventListener("DOMContentLoaded", () => {
+  const dealContainer = document.querySelector(".mall-hotdeal-deals");
+  const rows = dealContainer.querySelectorAll(".mall-hotdeal-row");
+  
+  let showingFirst = true;
 
-// Khởi tạo
-updateFlashsale();
+  function showFirstRows() {
+    rows.forEach((row, index) => {
+      row.style.display = index <= 1 ? "flex" : "none"; // hiển thị 2 dòng đầu
+    });
+    showingFirst = true;
+  }
+
+  function showRemainingRows() {
+    rows.forEach((row, index) => {
+      row.style.display = index > 1 ? "flex" : "none"; // hiện phần còn lại
+    });
+    showingFirst = false;
+  }
+
+  // Hiển thị dòng đầu khi mới load
+  showFirstRows();
+
+  // Gắn vào global để HTML gọi được
+  window.showFirstRows = showFirstRows;
+  window.showRemainingRows = showRemainingRows;
+});

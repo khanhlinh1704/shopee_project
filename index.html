@@ -163,19 +163,6 @@
                                     </ul>
                             </div>
                         </div>
-                        <div class="header__search-select">
-                            <span class="header__search-select-label">Trong shop</span>
-                            <i class="header__search-select-icon fas fa-angle-down"></i>
-                            <ul class="header__search-option">
-                                <li class="header__search-option-item header__search-option-item--active">
-                                <span>  Trong shop</span>
-                                    <i class="fas fa-check"></i>
-                                </li>
-                                <li class="header__search-option-item"><span>Ngoài shop</span>
-                                    <i class="fas fa-check"></i>
-                                </li>
-                            </ul>
-                        </div>
                         <button class="header__search-btn">
                             <i class="header__search-btn-icon fas fa-search"></i>
                         </button>
@@ -746,7 +733,7 @@
             </div>
                 </div>
                   <!-- Right btn -->
-            <button class="flash-sale-btn next-btn" onclick="prevFlashSale()">
+            <button class="flash-sale-btn next-btn" onclick="nextFlashSale()">
                 <i class="fas fa-chevron-right"></i>
             </button>
             </div>
@@ -774,52 +761,101 @@
         <div class="mall-hotdeal-banner">
           <img src="./assets/img/bannershopeemall.jpg" alt="Banner Săn Deal Siêu Hot" />
         </div>
-        <!-- Deal Grid Right -->
-        <div class="mall-hotdeal-deals">
-          <div class="mall-hotdeal-row">
-            <!-- Deal 1 -->
-            <div class="mall-hotdeal-item">
-              <img src="./assets/img/sanpham1.jpg" alt="Deal 1" class="mall-hotdeal-img" />
-              <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
+        <div class="mall-hotdeal-deals-wrapper">
+             <button class="mall-deal-btn prev-deal" onclick="showFirstRows()"><i class="fas fa-chevron-left"></i></button>
+            <!-- Deal Grid Right -->
+            <div class="mall-hotdeal-deals">
+              <div class="mall-hotdeal-row">
+                <!-- Deal 1 -->
+                <div class="mall-hotdeal-item">
+                  <img src="./assets/img/sanpham1.jpg" alt="Deal 1" class="mall-hotdeal-img" />
+                  <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
+                </div>
+                <!-- Deal 2 -->
+                <div class="mall-hotdeal-item">
+                  <img src="./assets/img/sanpham2.jpg" alt="Deal 2" class="mall-hotdeal-img" />
+                  <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
+                </div>
+                <!-- Deal 3 -->
+                <div class="mall-hotdeal-item">
+                  <img src="./assets/img/sanpham3.jpg" alt="Deal 3" class="mall-hotdeal-img" />
+                  <div class="mall-hotdeal-desc">Mua là có quà</div>
+                </div>
+                <!-- Deal 4 -->
+                <div class="mall-hotdeal-item">
+                  <img src="./assets/img/sanpham4.jpg" alt="Deal 4" class="mall-hotdeal-img" />
+                  <div class="mall-hotdeal-desc">Mua là có quà</div>
+                </div>
+              </div>
+              <div class="mall-hotdeal-row">
+                <!-- Deal 5 -->
+                <div class="mall-hotdeal-item">
+                  <img src="./assets/img/sanpham5.jpg" alt="Deal 5" class="mall-hotdeal-img" />
+                  <div class="mall-hotdeal-desc">Ưu đãi đến 50%</div>
+                </div>
+                <!-- Deal 6 -->
+                <div class="mall-hotdeal-item">
+                  <img src="./assets/img/sanpham6.jpg" alt="Deal 6" class="mall-hotdeal-img" />
+                  <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
+                </div>
+                <!-- Deal 7 -->
+                <div class="mall-hotdeal-item">
+                  <img src="./assets/img/sanpham7.jpg" alt="Deal 7" class="mall-hotdeal-img" />
+                  <div class="mall-hotdeal-desc">Mua 1 được 2</div>
+                </div>
+                <!-- Deal 8 -->
+                <div class="mall-hotdeal-item">
+                  <img src="./assets/img/sanpham8.jpg" alt="Deal 8" class="mall-hotdeal-img" />
+                  <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
+                </div>
+                </div>
+                <div class="mall-hotdeal-row">
+    
+                    <!-- Deal 9 -->
+                    <div class="mall-hotdeal-item">
+                      <img src="./assets/img/sanpham9.jpg" alt="Deal 9" class="mall-hotdeal-img" />
+                      <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
+                    </div>
+                    <!-- Deal 10 -->
+                    <div class="mall-hotdeal-item">
+                      <img src="./assets/img/sanpham10.jpg" alt="Deal 10" class="mall-hotdeal-img" />
+                      <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
+                    </div>
+                    <!-- Deal 11 -->
+                    <div class="mall-hotdeal-item">
+                      <img src="./assets/img/sanpham11.jpg" alt="Deal 11" class="mall-hotdeal-img" />
+                      <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
+                    </div>
+                    <!-- Deal 12 -->
+                    <div class="mall-hotdeal-item">
+                      <img src="./assets/img/sanpham12.jpg" alt="Deal 12" class="mall-hotdeal-img" />
+                      <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
+                    </div>
+                </div>
+                <div class="mall-hotdeal-row">
+                    <!-- Deal 13 -->
+                    <div class="mall-hotdeal-item">
+                      <img src="./assets/img/sanpham13.jpg" alt="Deal 13" class="mall-hotdeal-img" />
+                      <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
+                    </div>
+    
+                    <!-- Deal 14-->
+                    <div class="mall-hotdeal-item">
+                      <img src="./assets/img/sanpham14.jpg" alt="Deal 14" class="mall-hotdeal-img" />
+                      <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
+                    </div>
+                    <!-- Deal 15 -->
+                    <div class="mall-hotdeal-item">
+                      <img src="./assets/img/sanpham15.jpg" alt="Deal 15" class="mall-hotdeal-img" />
+                      <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
+                    </div> 
+
+                        <a href="#" class="shopee-mall-banner__viewall">Xem Tất Cả <i class="fas fa-chevron-right"></i></a> 
+                   
+                    
+                </div>
             </div>
-            <!-- Deal 2 -->
-            <div class="mall-hotdeal-item">
-              <img src="./assets/img/sanpham2.jpg" alt="Deal 2" class="mall-hotdeal-img" />
-              <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
-            </div>
-            <!-- Deal 3 -->
-            <div class="mall-hotdeal-item">
-              <img src="./assets/img/sanpham3.jpg" alt="Deal 3" class="mall-hotdeal-img" />
-              <div class="mall-hotdeal-desc">Mua là có quà</div>
-            </div>
-            <!-- Deal 4 -->
-            <div class="mall-hotdeal-item">
-              <img src="./assets/img/sanpham4.jpg" alt="Deal 4" class="mall-hotdeal-img" />
-              <div class="mall-hotdeal-desc">Mua là có quà</div>
-            </div>
-          </div>
-          <div class="mall-hotdeal-row">
-            <!-- Deal 5 -->
-            <div class="mall-hotdeal-item">
-              <img src="./assets/img/sanpham5.jpg" alt="Deal 5" class="mall-hotdeal-img" />
-              <div class="mall-hotdeal-desc">Ưu đãi đến 50%</div>
-            </div>
-            <!-- Deal 6 -->
-            <div class="mall-hotdeal-item">
-              <img src="./assets/img/sanpham6.jpg" alt="Deal 6" class="mall-hotdeal-img" />
-              <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
-            </div>
-            <!-- Deal 7 -->
-            <div class="mall-hotdeal-item">
-              <img src="./assets/img/sanpham7.jpg" alt="Deal 7" class="mall-hotdeal-img" />
-              <div class="mall-hotdeal-desc">Mua 1 được 2</div>
-            </div>
-            <!-- Deal 8 -->
-            <div class="mall-hotdeal-item">
-              <img src="./assets/img/sanpham8.jpg" alt="Deal 8" class="mall-hotdeal-img" />
-              <div class="mall-hotdeal-desc">Mua 1 tặng 1</div>
-            </div>
-          </div>
+            <button class="mall-deal-btn next-deal" onclick="showRemainingRows()"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </div>
