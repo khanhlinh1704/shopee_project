@@ -1,33 +1,25 @@
-let currentBannerIndex = 0; 
+//Banner
+let currentBanner = 0;
+const bannerItems = document.querySelectorAll('.banner-item');
 
-function updateBanner() {
-    const banners = document.querySelectorAll('.banner-item');
-    const totalBanners = banners.length;
-
-    // Ẩn tất cả các banner
-    banners.forEach((banner) => {
-        banner.classList.remove('active');
+function showBanner(index) {
+    bannerItems.forEach((item, i) => {
+        item.classList.toggle('active', i === index);
     });
+}
 
-    // Hiển thị banner hiện tại
-    banners[currentBannerIndex].classList.add('active');
+function prevBanner() {
+    currentBanner = (currentBanner - 1 + bannerItems.length) % bannerItems.length;
+    showBanner(currentBanner);
 }
 
 function nextBanner() {
-    const banners = document.querySelectorAll('.banner-item');
-    const totalBanners = banners.length;
-
-    // Chuyển sang banner tiếp theo
-    currentBannerIndex = (currentBannerIndex + 1) % totalBanners;
-    updateBanner();
+    currentBanner = (currentBanner + 1) % bannerItems.length;
+    showBanner(currentBanner);
 }
 
-// Gắn sự kiện cho nút ">"
-document.querySelector('.banner-arrow.next').addEventListener('click', nextBanner);
-
-// Khởi tạo banner
-updateBanner();
-
+// Khởi tạo banner đầu tiên
+showBanner(currentBanner);
 // Danh mục section
 let currentIndex = 0; 
 
@@ -95,70 +87,43 @@ document.querySelector('.banner-arrow.next').addEventListener('click', nextBanne
 // Khởi tạo banner
 updateBanner();
 
-// Danh mục section
-let currentIndex = 0; 
+// Flash Sale Carousel dạng trượt
+let flashsaleIndex = 0;
+const flashsaleList = document.querySelector('.flashsale-list');
+const flashsaleItems = document.querySelectorAll('.flashsale-item');
+const flashsalePerPage = 6;
+const flashsaleTotal = flashsaleItems.length;
+const maxFlashsaleIndex = Math.ceil(flashsaleTotal / flashsalePerPage) - 1;
 
-function updateCarousel() {
-    const carousel = document.querySelector('.carousel');
-    const totalSets = document.querySelectorAll('.carousel-set').length;
+function updateFlashsale() {
+    const offset = -flashsaleIndex * 100;
+    flashsaleList.style.transform = `translateX(${offset}%)`;
 
-    // Calculate the offset based on the current index
-    const offset = -currentIndex * 100; // Each set takes 100% width
-    carousel.style.transform = `translateX(${offset}%)`;
-
-    // Ẩn/hiện nút điều hướng
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    prevBtn.style.display = currentIndex === 0 ? 'none' : 'flex';
-    nextBtn.style.display = currentIndex === totalSets - 1 ? 'none' : 'flex';
+    // Ẩn/hiện nút
+    const prevBtn = document.querySelector('.flashsale-arrow.prev');
+    const nextBtn = document.querySelector('.flashsale-arrow.next');
+    prevBtn.style.display = flashsaleIndex === 0 ? 'none' : 'flex';
+    nextBtn.style.display = flashsaleIndex === maxFlashsaleIndex ? 'none' : 'flex';
 }
 
-function prevSlide() {
-    if (currentIndex > 0) {
-        currentIndex--; 
-        updateCarousel();
+function prevFlashsale() {
+    if (flashsaleIndex > 0) {
+        flashsaleIndex--;
+        updateFlashsale();
     }
 }
 
-function nextSlide() {
-    const totalSets = document.querySelectorAll('.carousel-set').length;
-    if (currentIndex < totalSets - 1) {
-        currentIndex++; 
-        updateCarousel();
+function nextFlashsale() {
+    if (flashsaleIndex < maxFlashsaleIndex) {
+        flashsaleIndex++;
+        updateFlashsale();
     }
 }
 
+const flashsalePrevBtn = document.querySelector('.flashsale-arrow.prev');
+const flashsaleNextBtn = document.querySelector('.flashsale-arrow.next');
+if (flashsalePrevBtn) flashsalePrevBtn.addEventListener('click', prevFlashsale);
+if (flashsaleNextBtn) flashsaleNextBtn.addEventListener('click', nextFlashsale);
 
-updateCarousel();
-updateCarousel();
-// Flash sale
-document.addEventListener('DOMContentLoaded', function () {
-    const list = document.querySelector('.flash-sale-list');
-    const cards = document.querySelectorAll('.flash-sale-card');
-    const nextBtn = document.querySelector('.flash-sale-btn.next-btn');
-    const prevBtn = document.querySelector('.flash-sale-btn.prev-btn');
-    const visibleCount = 6;
-    let currentIndex = 0;
-
-    function updateCarousel() {
-        const cardWidth = cards[0].offsetWidth + 8; 
-        list.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    }
-
-    nextBtn.addEventListener('click', function () {
-        if (currentIndex < cards.length - visibleCount) {
-            currentIndex++;
-            updateCarousel();
-        }
-    });
-
-    prevBtn.addEventListener('click', function () {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        }
-    });
-
-    // Responsive: cập nhật lại khi resize
-    window.addEventListener('resize', updateCarousel);
-});
+// Khởi tạo
+updateFlashsale();
