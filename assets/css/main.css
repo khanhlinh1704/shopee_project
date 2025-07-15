@@ -1963,13 +1963,14 @@ ul {
   padding: 2px;
   border-radius: 4px;
   transition: all 0.3s ease;
-   
+  border: 1px solid transparent;
 }
 
 .product-item:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(-3px);
   border-color: #F45B37;
+ 
 }
 
 .product-top {
@@ -2012,7 +2013,11 @@ ul {
   width: calc(100% - 20px); 
   box-sizing: border-box; 
 }
-
+.product-card:hover {
+  border: 2px solid #f57224; 
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 .product-card__name{
   font-size: 14px;
   color: #333;
