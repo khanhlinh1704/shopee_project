@@ -8,19 +8,23 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/productdetail.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap&subset=vietnamese" rel="stylesheet">
 
 </head>
+<body>
+  
 <div>
     <div class="app">
         <header class="header">
             <div class="grid">
                 <nav class="header__navbar">
                     <ul class="header__navbar-list">
+                        <li class="heder-navbar-item">
+                            <span class="header__navbar-title--no-pointer">Kênh người bán</span>
+                        </li>
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
-                            Vào cửa hàng trên ứng dụng shoppe
+                            Tải ứng dụng
                             <!-- Header QR CODE -->
                         <div class="header__qr">
                             <img src="./assets/img/qrcode.png" alt="QR CODE" class="header__qr-img">
@@ -54,11 +58,11 @@
                         </a>
                         <div class="header__notify">
                             <header class="header__notify-header">
-                                <h3>Thông mới được nhận</h3>
+                                <h3>Thông báo mới được nhận</h3>
                             </header>
                             <ul class="header__notify-list">
                                 <li class="header__notify-item header__notify-item--viewed">
-                                    <a href="" class="header__notify-link">
+                                    <a href="http://google.com" class="header__notify-link">
                                         <img src="./assets/img/comestic.jpeg" alt="" class="header__notify-img">
                                         <div class="header__notify-info">
                                             <span class="header__notify-name">Mỹ phẩm Shoppe chính hãng</span>
@@ -67,7 +71,7 @@
                                     </a>
                                 </li>
                                 <li class="header__notify-item">
-                                    <a href="" class="header__notify-link">
+                                    <a href="http://google.com" class="header__notify-link">
                                         <img src="./assets/img/comestic 2.jpg" alt="" class="header__notify-img">
                                         <div class="header__notify-info">
                                             <span class="header__notify-name">Mỹ phẩm Shoppe chính hãng đến từ thương hiệu Chanel cao cấp</span>
@@ -76,7 +80,7 @@
                                     </a>
                                 </li>
                                 <li class="header__notify-item">
-                                    <a href="" class="header__notify-link">
+                                    <a href="http://google.com" class="header__notify-link">
                                         <img src="./assets/img/comestic 3.jpg" alt="" class="header__notify-img">
                                         <div class="header__notify-info">
                                             <span class="header__notify-name">Boy De Chanel Foundation</span>
@@ -86,13 +90,13 @@
                                 </li>
                             </ul>
                             <footer class="header__notify-footer">
-                                <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                                <a href="http://google.com" class="header__notify-footer-btn">Xem tất cả</a>
                             </footer>
                         </div>
 
                     </li>
                     <li class="header__navbar-item">
-                        <a href="" class="header__navbar-link">
+                        <a href="http://google.com" class="header__navbar-link">
                             <i class="header__navbar-icon far fa-question-circle"></i>
                             Trợ giúp</a>
                     </li>
@@ -123,7 +127,7 @@
                 <!-- HEADER WITH SEARCH-->
                 <div class="header-with-search">
                     <div class="header__logo">
-                        <a href="/" class="header__logo-link">
+                        <a href="http://google.com" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
                                     <path
@@ -136,6 +140,17 @@
                     <div class="header__search">
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+                                <div class="header__search-suggestion">
+                                     <a href="#">Thảm Tập Yoga</a>
+                                     <a href="#">Áo Tập</a>
+                                     <a href="#">Chân Váy Bí Phối Xếp Ly</a>
+                                     <a href="#">Máy Nghe Nhạc Sony Walkman</a>
+                                     <a href="#">Ốp Lưng iPhone</a>
+                                     <a href="#">Kính Jennie Gentle Monster</a>
+                                     <a href="#">Đồ Hela</a>
+                                     <a href="#">Gym</a>
+                                </div>
+                           
                             <!-- SEARCH HISTORY -->
                             <div class="header__search-history">
                                     <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
@@ -148,19 +163,6 @@
                                         </li>
                                     </ul>
                             </div>
-                        </div>
-                        <div class="header__search-select">
-                            <span class="header__search-select-label">Trong shop</span>
-                            <i class="header__search-select-icon fas fa-angle-down"></i>
-                            <ul class="header__search-option">
-                                <li class="header__search-option-item header__search-option-item--active">
-                                <span>  Trong shop</span>
-                                    <i class="fas fa-check"></i>
-                                </li>
-                                <li class="header__search-option-item"><span>Ngoài shop</span>
-                                    <i class="fas fa-check"></i>
-                                </li>
-                            </ul>
                         </div>
                         <button class="header__search-btn">
                             <i class="header__search-btn-icon fas fa-search"></i>
@@ -178,196 +180,231 @@
                             <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
                             <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
                             <ul class="header__cart-list-item">
-                                <li class="header__cart-item">
-                                    <img src="https://img.abaha.vn/photos/resized/320x/83-1600498324-myphamohui-lgvina.png" alt="" class="header__cart-img">
-                                    <div class="header__cart-item-info">
-                                        <div class="header__cart-item-head">
-                                            <h5 class="header__cart-item-name">Bộ son cao cấp</h5>
-                                            <div class="header__cart-item-price-wrap">
-                                                <span class="header__cart-item-price">2.000.000đ</span>
-                                                <span class="header__cart-item-mul">x</span>
-                                                <span class="header__cart-item-qnt">2</span>
+                                <a href="http://google.com">
+
+                                    <li class="header__cart-item">
+    
+                                       
+        
+                                             <img src="https://img.abaha.vn/photos/resized/320x/83-1600498324-myphamohui-lgvina.png" alt="" class="header__cart-img">
+                                             <div class="header__cart-item-info">
+                                                 <div class="header__cart-item-head">
+                                                     <h5 class="header__cart-item-name">Bộ son cao cấp</h5>
+                                                     <div class="header__cart-item-price-wrap">
+                                                         <span class="header__cart-item-price">2.000.000đ</span>
+                                                         <span class="header__cart-item-mul">x</span>
+                                                         <span class="header__cart-item-qnt">2</span>
+                                                     </div>
+                                                 </div>
+                                                 <div class="header__cart-item-body">
+                                                     <span class="header__cart-item-description">
+                                                         Phân loại: Mỹ phẩm
+                                                     </span>
+                                                     <span class="header__cart-item-remove">Xóa</span>
+                                                 </div>
+                                         
+                                        
+                                    </li>
+                                    <li class="header__cart-item">
+                                       
+    
+                                            <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">27.500.000</span>
+                                                        <span class="header__cart-item-mul">x</span>
+                                                        <span class="header__cart-item-qnt">1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại: Điện tử
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="header__cart-item-body">
-                                            <span class="header__cart-item-description">
-                                                Phân loại: Mỹ phẩm
-                                            </span>
-                                            <span class="header__cart-item-remove">Xóa</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="header__cart-item">
-                                    <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
-                                    <div class="header__cart-item-info">
-                                        <div class="header__cart-item-head">
-                                            <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
-                                            <div class="header__cart-item-price-wrap">
-                                                <span class="header__cart-item-price">27.500.000</span>
-                                                <span class="header__cart-item-mul">x</span>
-                                                <span class="header__cart-item-qnt">1</span>
+                                        
+                                    </li>
+                                    <li class="header__cart-item">
+                                        
+    
+                                            <img src="https://img.abaha.vn/photos/resized/320x/83-1587707764-myphamohui-lgvina.png" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Bộ set phấn phủ</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">49.000đ</span>
+                                                        <span class="header__cart-item-mul">x</span>
+                                                        <span class="header__cart-item-qnt">3</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại: Mỹ phẩm
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="header__cart-item-body">
-                                            <span class="header__cart-item-description">
-                                                Phân loại: Điện tử
-                                            </span>
-                                            <span class="header__cart-item-remove">Xóa</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="header__cart-item">
-                                    <img src="https://img.abaha.vn/photos/resized/320x/83-1587707764-myphamohui-lgvina.png" alt="" class="header__cart-img">
-                                    <div class="header__cart-item-info">
-                                        <div class="header__cart-item-head">
-                                            <h5 class="header__cart-item-name">Bộ set phấn phủ</h5>
-                                            <div class="header__cart-item-price-wrap">
-                                                <span class="header__cart-item-price">49.000đ</span>
-                                                <span class="header__cart-item-mul">x</span>
-                                                <span class="header__cart-item-qnt">3</span>
+                                        
+                                    </li>
+                                    <li class="header__cart-item">
+                                       
+    
+                                            <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">27.500.000</span>
+                                                        <span class="header__cart-item-mul">x</span>
+                                                        <span class="header__cart-item-qnt">1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại: Điện tử
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="header__cart-item-body">
-                                            <span class="header__cart-item-description">
-                                                Phân loại: Mỹ phẩm
-                                            </span>
-                                            <span class="header__cart-item-remove">Xóa</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="header__cart-item">
-                                    <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
-                                    <div class="header__cart-item-info">
-                                        <div class="header__cart-item-head">
-                                            <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
-                                            <div class="header__cart-item-price-wrap">
-                                                <span class="header__cart-item-price">27.500.000</span>
-                                                <span class="header__cart-item-mul">x</span>
-                                                <span class="header__cart-item-qnt">1</span>
+                                       
+                                    </li>
+                                    <li class="header__cart-item">
+                                        
+    
+                                            <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">27.500.000</span>
+                                                        <span class="header__cart-item-mul">x</span>
+                                                        <span class="header__cart-item-qnt">1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại: Điện tử
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="header__cart-item-body">
-                                            <span class="header__cart-item-description">
-                                                Phân loại: Điện tử
-                                            </span>
-                                            <span class="header__cart-item-remove">Xóa</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="header__cart-item">
-                                    <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
-                                    <div class="header__cart-item-info">
-                                        <div class="header__cart-item-head">
-                                            <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
-                                            <div class="header__cart-item-price-wrap">
-                                                <span class="header__cart-item-price">27.500.000</span>
-                                                <span class="header__cart-item-mul">x</span>
-                                                <span class="header__cart-item-qnt">1</span>
+                                        
+                                    </li>
+                                    <li class="header__cart-item">
+                                       
+    
+                                            <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">27.500.000</span>
+                                                        <span class="header__cart-item-mul">x</span>
+                                                        <span class="header__cart-item-qnt">1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại: Điện tử
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="header__cart-item-body">
-                                            <span class="header__cart-item-description">
-                                                Phân loại: Điện tử
-                                            </span>
-                                            <span class="header__cart-item-remove">Xóa</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="header__cart-item">
-                                    <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
-                                    <div class="header__cart-item-info">
-                                        <div class="header__cart-item-head">
-                                            <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
-                                            <div class="header__cart-item-price-wrap">
-                                                <span class="header__cart-item-price">27.500.000</span>
-                                                <span class="header__cart-item-mul">x</span>
-                                                <span class="header__cart-item-qnt">1</span>
+                                       
+                                    </li>
+                                    <li class="header__cart-item">
+                                        
+    
+                                            <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">27.500.000</span>
+                                                        <span class="header__cart-item-mul">x</span>
+                                                        <span class="header__cart-item-qnt">1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại: Điện tử
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="header__cart-item-body">
-                                            <span class="header__cart-item-description">
-                                                Phân loại: Điện tử
-                                            </span>
-                                            <span class="header__cart-item-remove">Xóa</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="header__cart-item">
-                                    <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
-                                    <div class="header__cart-item-info">
-                                        <div class="header__cart-item-head">
-                                            <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
-                                            <div class="header__cart-item-price-wrap">
-                                                <span class="header__cart-item-price">27.500.000</span>
-                                                <span class="header__cart-item-mul">x</span>
-                                                <span class="header__cart-item-qnt">1</span>
+                                       
+                                    </li>
+                                    <li class="header__cart-item">
+                                       
+    
+                                            <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">27.500.000</span>
+                                                        <span class="header__cart-item-mul">x</span>
+                                                        <span class="header__cart-item-qnt">1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại: Điện tử
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="header__cart-item-body">
-                                            <span class="header__cart-item-description">
-                                                Phân loại: Điện tử
-                                            </span>
-                                            <span class="header__cart-item-remove">Xóa</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="header__cart-item">
-                                    <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
-                                    <div class="header__cart-item-info">
-                                        <div class="header__cart-item-head">
-                                            <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
-                                            <div class="header__cart-item-price-wrap">
-                                                <span class="header__cart-item-price">27.500.000</span>
-                                                <span class="header__cart-item-mul">x</span>
-                                                <span class="header__cart-item-qnt">1</span>
+                                        
+                                    </li>
+                                    <li class="header__cart-item">
+                                      
+    
+                                            <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">27.500.000</span>
+                                                        <span class="header__cart-item-mul">x</span>
+                                                        <span class="header__cart-item-qnt">1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại: Điện tử
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="header__cart-item-body">
-                                            <span class="header__cart-item-description">
-                                                Phân loại: Điện tử
-                                            </span>
-                                            <span class="header__cart-item-remove">Xóa</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="header__cart-item">
-                                    <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
-                                    <div class="header__cart-item-info">
-                                        <div class="header__cart-item-head">
-                                            <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
-                                            <div class="header__cart-item-price-wrap">
-                                                <span class="header__cart-item-price">27.500.000</span>
-                                                <span class="header__cart-item-mul">x</span>
-                                                <span class="header__cart-item-qnt">1</span>
+                                       
+                                    </li>
+                                    <li class="header__cart-item">
+                                        
+    
+                                            <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">27.500.000</span>
+                                                        <span class="header__cart-item-mul">x</span>
+                                                        <span class="header__cart-item-qnt">1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại: Điện tử
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="header__cart-item-body">
-                                            <span class="header__cart-item-description">
-                                                Phân loại: Điện tử
-                                            </span>
-                                            <span class="header__cart-item-remove">Xóa</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="header__cart-item">
-                                    <img src="https://cf.shopee.vn/file/57ae68e7da097de895fe7a981023bf6b_tn" alt="" class="header__cart-img">
-                                    <div class="header__cart-item-info">
-                                        <div class="header__cart-item-head">
-                                            <h5 class="header__cart-item-name">Laptop ASUS ROG Strix G15 G512-IAL013T (i5-10300H | 8GB | 512GB | VGA GTX 1650Ti 4GB | 15.6" FHD 144Hz | Win 10)</h5>
-                                            <div class="header__cart-item-price-wrap">
-                                                <span class="header__cart-item-price">27.500.000</span>
-                                                <span class="header__cart-item-mul">x</span>
-                                                <span class="header__cart-item-qnt">1</span>
-                                            </div>
-                                        </div>
-                                        <div class="header__cart-item-body">
-                                            <span class="header__cart-item-description">
-                                                Phân loại: Điện tử
-                                            </span>
-                                            <span class="header__cart-item-remove">Xóa</span>
-                                        </div>
-                                    </div>
-                                </li>
+                                      
+                                    </li>
+                                </a>
+                                
                             </ul>
                             <button class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</button>
                         </div>
@@ -379,462 +416,472 @@
         </header>
     </div>
  </div>
-</head>
- <!--Detail-->
-  <div class="breadcrumb">
-  <a href="#" class="breadcrumb-link">Shopee</a>
-  <span class="breadcrumb-separator">></span>
-  <a href="#" class="breadcrumb-link">Đồ chơi</a>
-  <span class="breadcrumb-separator">></span>
-  <a href="#" class="breadcrumb-link">Đồ chơi giáo dục</a>
-  <span class="breadcrumb-separator">></span>
-  <a href="#" class="breadcrumb-link">Đồ chơi xếp hình & xây dựng</a>
-  <span class="breadcrumb-separator">></span>
-  <span class="breadcrumb-current">
-    Mô Hình Gỗ 3D BIBY An Toàn Nhiều Mẫu tự lắp ghép làm đồ trang trí phát triển trí tuệ và tăng tính kiên nhẫn
-  </span>
-</div>
-<!--Product detail page -->
-<div class="detail-container">
-        <div class="detail-image">
-            <img src="./assets/img/productitem1.jpg" alt="Mô hình gỗ">
- <div class="left-actions">
-  <div class="share-section">
-    <span>Chia sẻ:</span>
-    <div class="social-icons">
-        <a href="https://www.google.com/">
-            <img src="#" alt="Messenger">
-        </a>
-        <a href="https://www.google.com/">
-            <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/27da6b178e92815d.svg" alt="Facebook">
-        </a>
-        <a href="https://www.google.com/">
-            <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/07f9b305bc49044e.svg" alt="Pinterest">
-        </a>
-        <a href="https://www.google.com/">
-            <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/1ed839bc2097d73c.svg" alt="Twitter">
-        </a>
-        
-    </div>
+   <!--Detail-->
+    <div class="breadcrumb">
+    <a href="#" class="breadcrumb-link">Shopee</a>
+    <span class="breadcrumb-separator">></span>
+    <a href="#" class="breadcrumb-link">Đồ chơi</a>
+    <span class="breadcrumb-separator">></span>
+    <a href="#" class="breadcrumb-link">Đồ chơi giáo dục</a>
+    <span class="breadcrumb-separator">></span>
+    <a href="#" class="breadcrumb-link">Đồ chơi xếp hình & xây dựng</a>
+    <span class="breadcrumb-separator">></span>
+    <span class="breadcrumb-current">
+      Mô Hình Gỗ 3D BIBY An Toàn Nhiều Mẫu tự lắp ghép làm đồ trang trí phát triển trí tuệ và tăng tính kiên nhẫn
+    </span>
   </div>
-  <div class="likes-count">
-    <svg width="20" height="20" fill="#ee4d2d" viewBox="0 0 24 24">
-      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
-               2 5.42 4.42 3 7.5 3c1.74 0 
-               3.41.81 4.5 2.09C13.09 3.81 
-               14.76 3 16.5 3 19.58 3 22 5.42 
-               22 8.5c0 3.78-3.4 6.86-8.55 
-               11.54L12 21.35z"></path>
-    </svg>
-    Đã thích (4k)
-  </div>
-</div>
-
-        </div>
-        <div class="detail-products">
-            <div class="detail-header">
-                <h1 class="product-title">Mô Hình Gỗ 3D BIBY An Toàn Nhiều Mẫu tự lắp ghép làm đồ trang trí phát triển trí tuệ và tăng tính kiên nhẫn</h1>
-            </div>
-            
-            <div class="detail-rating">
-                <span class="rating-value">4.9</span>
-                <span class="stars">
-                    <span class="stars">★★★★★</span>
-                </span>
-                <div class="rating-details">
-                    <span>2,8k Đánh Giá</span>
-                    <span>Đã Bán 10,2k</span>
-                    <span>Tổ cáo</span>
-                </div>
-            </div>
-            
-            
-            <div class="price-section">
-                <div class="current-price">475.000đ - 4.325.000đ</div>
-                <div class="original-price">400.000đ - 4.375.000đ</div>
-                <div class="discount">24%</div>
-            </div>
-            
-           <div class="shipping-info"> 
-    <div class="shipping-title">Vận Chuyển
-         
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#26AA99" fill-rule="evenodd" clip-rule="evenodd" d="M1.45831 4.16669C1.11314 4.16669 0.833313 4.44651 0.833313 4.79169V14.375C0.833313 14.7202 1.11314 15 1.45831 15H3.49183C3.57186 16.1052 4.49636 16.979 5.6207 16.979C6.74504 16.979 7.74983 16.1052 7.74983 15H12.0833C12.0867 15 13.2993 16.1054 14.2222 16.979H15.3481C16.097 16.979 16.7083 16.3677 16.7083 15.6188V13.1941C16.7083 12.9436 16.6077 12.7038 16.4306 12.5228L14.236 10.2602C14.0531 10.0737 13.7993 9.97244 13.5361 9.98434C13.2729 9.99624 13.0284 10.1192 12.8643 10.3236L11.8684 11.5325L10.5833 10.2437V6.66669H14.3061L16.9882 10.3521L17.4145 9.98418L14.4465 5.91669C14.2618 5.65406 13.9685 5.50002 13.6542 5.50002H10.4166V4.79169C10.4166 4.44651 10.1368 4.16669 9.79165 4.16669H1.45831ZM5.6207 15.3334C5.27852 15.3334 5.00002 15.0549 5.00002 14.7128C5.00002 14.3706 5.27852 14.0921 5.6207 14.0921C5.96289 14.0921 6.2414 14.3706 6.2414 14.7128C6.2414 15.0549 5.96289 15.3334 5.6207 15.3334Z"/>
-        </svg>
-        Nhận hàng 25 Th07 - 28 Th07 &gt;
-    
-    </div>
-   
-</div>
-
-<div class="guarantee">
-    <p>
-           <span class="guarantee-title">An Tâm Mua<br>Sắm Cùng<br>Shopee</span>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path  fill=" #ee4d2d"  fill-rule="evenodd" clip-rule="evenodd" d="M10 0.833313L1.66669 4.16665V9.99998C1.66669 14.6024 5.02827 18.9021 10 19.1666C14.9718 18.9021 18.3334 14.6024 18.3334 9.99998V4.16665L10 0.833313ZM9.16669 14.1666L5.83335 10.8333L7.04169 9.62498L9.16669 11.75L13.5417 7.37498L14.75 8.58331L9.16669 14.1666Z"/>
-        </svg>
-       <span class="guarantee-content">Bảo hiểm Thiệt hại sản phẩm</span>
-    </p>
-   
-</div>
-
-            
-            <div class="variants-section">
-                <div class="variants-title">Loại</div>
-                <div class="variants-list">
-                    <div class="variant-item"><img src="./assets/img/owl.jpg" alt="">Cú mèo</div>
-                    <div class="variant-item"><img src="./assets/img/eiffle.jpg" alt="">Tháp Eiffle</div>
-                    <div class="variant-item"><img src="./assets/img/ship.jpg" alt="">Tàu Silk Merchant</div>
-                    <div class="variant-item"><img src="./assets/img/gate.jpg" alt="">Thiên An Môn</div>
-                    <div class="variant-item"><img src="./assets/img/windmill.jpg" alt="">Cối Xay Gió Holland</div>
-                </div>
-            </div>
-            
-           <div class="detail-actions">
-
-    <div class="quantity-section">
-        <span>Số Lượng</span>
-        <div class="quantity-control">
-            <button>-</button>
-            <input type="text" value="1">
-            <button>+</button>
-            {kho}sản phẩm có sẵn
-        </div>
-    </div>
-<div class="action-buttons">
-  <button class="add-to-cart">
-   
-    Thêm Vào Giỏ Hàng
-  </button>
-  <button class="buy-now">Mua Ngay</button>
-</div>
-
-</div>
-
-        </div>
-    </div>
-    <div class="container">
-       <div class="shop-card">
-         <div class="shop-info">
-     <img src="./assets/img/bibyshop.jpg" alt="Biby Shop" class="shop-logo" />
-     <div class="shop-text">
-       <div class="shop-name">Đồ chơi BIBYSHOP</div>
-       <div class="shop-status">Online 2 Giờ Trước</div>
-       <div class="shop-actions">
-         <button class="btn chat"><i class="fas fa-comment"></i> Chat Ngay</button>
-         <button class="btn view-shop"><i class="fas fa-store"></i> Xem Shop</button>
-       </div>
-     </div>
-   </div>
-   
-       <div class="shop-details">
-     <div class="detail-row">
-       <div class="detail"><span>Đánh Giá</span><strong>10,2k</strong></div>
-       <div class="detail"><span>Tỉ Lệ Phản Hồi</span><strong>80%</strong></div>
-       <div class="detail"><span>Tham Gia</span><strong>3 năm trước</strong></div>
-     </div>
-     <div class="detail-row">
-       <div class="detail"><span>Sản Phẩm</span><strong>266</strong></div>
-       <div class="detail"><span>Thời Gian Phản Hồi</span><strong>trong vài giờ</strong></div>
-       <div class="detail"><span>Người Theo Dõi</span><strong>6,6k</strong></div>
-     </div>
-   </div>
-       </div>
-     </div>
-
-<div class="main-container">
-<div class="left-content">
-
-   
-     <div class="product-detail-box">
-     <div class="product-section">
-       <h3>CHI TIẾT SẢN PHẨM</h3>
-       <div class="product-detail-row">
-         <span>Danh Mục</span>
-         <span><a href="#">Shopee</a> > <a href="#">Đồ Chơi</a> > <a href="#">Đồ chơi giáo dục</a> > <a href="#">Đồ chơi xếp hình & xây dựng</a></span>
-       </div>
-       <div class="product-detail-row">
-         <span>Kho</span>
-         <span>1384</span>
-       </div>
-       <div class="product-detail-row">
-         <span>Chất liệu</span>
-         <span>Gỗ</span>
-       </div>
-       <div class="product-detail-row">
-         <span>Gửi từ</span>
-         <span>Hà Nội</span>
-       </div>
-     </div>
-   
-     <div class="product-section">
-       <h3>MÔ TẢ SẢN PHẨM</h3>
-       <p>
-         Bibyshop giới thiệu đến bạn một sản phẩm độc đáo và an toàn cho bé
-         <br>- Mô hình lắp ghép 3D bằng gỗ! 🌟
-         <br>🏗️ Với chất liệu gỗ ép cao cấp, mô hình lắp ghép 3D của chúng tôi đảm bảo an toàn khi bé tiếp xúc và sử dụng. Chất liệu gỗ tự nhiên không chỉ mang lại cảm giác chắc chắn và bền bỉ, mà còn giúp trẻ phát triển khả năng tư duy logic và khéo léo trong quá trình lắp ráp
-         <br>🎨 Với màu sắc trung tính bắt mắt, mô hình lắp ghép 3D của chúng tôi thích hợp cho cả bé trai và bé gái. Bạn có thể chọn từ những mô hình phong cảnh tự nhiên, những chiếc xe hoặc những con vật dễ thương. Mỗi chi tiết trên mô hình được gọt giũa tỉ mỉ, mang đến sự mềm mại và an toàn cho bé.
-         <br>🧩 Thiết kế mô hình lắp ghép 3D thông minh của chúng tôi không chỉ đáp ứng nhu cầu vui chơi và giải trí cho trẻ, mà còn giúp trẻ phát triển khả năng sáng tạo và tư duy không gian. Bé có thể tự tin khám phá và lắp ráp mô hình theo sở thích riêng, từ đó khám phá và học hỏi nhiều điều mới.
-         <br>⚙️ Kết cấu chắc chắn bền bỉ của mô hình lắp ghép 3D đảm bảo rằng sản phẩm sẽ tồn tại lâu dài và không bị hỏng hóc sau nhiều lần sử dụng. Bạn có thể yên tâm rằng mô hình sẽ là một trò chơi lâu dài và đáng giá cho bé.
-         <br>💡 Mô hình lắp ghép 3D bằng gỗ không chỉ là một món đồ chơi, mà còn là một công cụ giáo dục giúp trẻ phát triển khả năng tư duy, tăng cường sự sáng tạo và khám phá. Hãy tặng cho bé yêu của bạn một món quà thú vị và mang tính giáo dục, chắc chắn sẽ khiến bé vui và hạnh phúc.
-         <br>Quy định đổi trả hàng hóa :
-   
-   Khách hàng được trả hàng hóa theo quy định của Shopee
-   
-    Đổi trả trong vòn 15 ngày kể từ khi khách khiếu nại
-   
-   Điều kiện đổi trả:
-   
-   Sản phẩm còn nguyên tem mắc.
-   
-   Sản phẩm lỗi do bên Bibishop hoặc do quá trình vận chuyển.
-   
-   Tình trạng hàng hóa giao sai sản phẩm, giao sai mẫu mã.
-   
-   #binhnuoc #giunhiet #binhgiunhiet #binhnuocgiunhiet #500ml #binhnuocgiunhietmini #locklock #cute
-       </p>
-     </div>
-   </div>
-   <div class="review-box">
-     <h3>ĐÁNH GIÁ SẢN PHẨM</h3>
-     <div class="review-summary">
-       <div class="review-score">
-         <div class="score-number">4.8 <span>trên 5</span></div>
-         <div class="score-stars">★★★★★</div>
-       </div>
-       <div class="review-filters">
-         <button class="filter active">Tất Cả</button>
-         <button class="filter">5 Sao (589)</button>
-         <button class="filter">4 Sao (64)</button>
-         <button class="filter">3 Sao (15)</button>
-         <button class="filter">2 Sao (5)</button>
-         <button class="filter">1 Sao (13)</button>
-         <button class="filter">Có Bình Luận (298)</button>
-         <button class="filter">Có Hình Ảnh / Video (206)</button>
-       </div>
-     </div>
-     <div class="review-list">
-     <div class="review-item">
-       <div class="review-user">
-         <img src="./assets/img/avcmt.jpg" alt="avatar" class="user-avatar">
-         <div class="user-info">
-           <div class="user-name">abcd</div>
-           <div class="user-stars">★★★★★</div>
-           <div class="review-meta">2025-06-18 21:01 | Phân loại hàng: Cối xay gió lucky</div>
-         </div>
-       </div>
-       <div class="review-text">
-         Món đồ chơi vừa để trang trí rất đẹp, giao hàng nhanh, shiper chuyên nghiệp, sẽ mua thêm mô hình khác sau khi ghép xong hình này
-       </div>
-       <div class="review-images">
-         <img src="./assets/img/cmt.jpg" alt="ảnh review">
-         <img src="./assets/img/cmt2.jpg" alt="ảnh review">
-       </div>
-       <div class="shop-reply">
-         <strong>Phản Hồi Của Người Bán</strong>
-         <p>Cảm ơn bạn đã tin tưởng và ủng hộ BIBY. Phản hồi của bạn là động lực để shop hoàn thiện hơn mỗi ngày. Nếu bạn cần hỗ trợ, hãy ib ngay shop luôn sẵn sàng giải quyết mọi vấn đề.</p>
-       </div>
-       <div class="review-likes">
-         <span>👍 2</span>
-       </div>
-     </div>
-     <div class="review-item">
-       <div class="review-user">
-         <img src="./assets/img/avcmt.jpg" alt="avatar" class="user-avatar">
-         <div class="user-info">
-           <div class="user-name">abcd</div>
-           <div class="user-stars">★★★★★</div>
-           <div class="review-meta">2025-06-18 21:01 | Phân loại hàng: Cối xay gió lucky</div>
-         </div>
-       </div>
-       <div class="review-text">
-         Món đồ chơi vừa để trang trí rất đẹp, giao hàng nhanh, shiper chuyên nghiệp, sẽ mua thêm mô hình khác sau khi ghép xong hình này
-       </div>
-       <div class="review-images">
-         <img src="./assets/img/cmt.jpg" alt="ảnh review">
-         <img src="./assets/img/cmt2.jpg" alt="ảnh review">
-       </div>
-       <div class="shop-reply">
-         <strong>Phản Hồi Của Người Bán</strong>
-         <p>Cảm ơn bạn đã tin tưởng và ủng hộ BIBY. Phản hồi của bạn là động lực để shop hoàn thiện hơn mỗi ngày. Nếu bạn cần hỗ trợ, hãy ib ngay shop luôn sẵn sàng giải quyết mọi vấn đề.</p>
-       </div>
-       <div class="review-likes">
-         <span>👍 2</span>
-       </div>
-     </div>
-   </div>
-   </div>
-</div>
-
-   
-   <div class="right-sidebar">
-  <div class="voucher-container">
-    <h3>Voucher của Shop</h3>
-    <div class="voucher-list">
-      <div class="voucher-item">
-        <div>
-          <strong>Giảm 3%</strong><br>
-          Đơn Tối Thiểu ₫70k<br>
-          Giảm tối đa ₫3k
-        </div>
-        <button>Lưu</button>
-      </div>
-      <div class="voucher-item">
-        <div>
-          <strong>Giảm ₫5k</strong><br>
-          Đơn Tối Thiểu ₫99k
-        </div>
-        <button>Lưu</button>
-      </div>
-      <div class="voucher-item">
-        <div>
-          <strong>Giảm ₫3k</strong><br>
-          Đơn Tối Thiểu ₫99k
-        </div>
-        <button>Lưu</button>
-      </div>
-      <div class="voucher-item">
-        <div>
-          <strong>Giảm ₫3k</strong><br>
-          Đơn Tối Thiểu ₫99k
-        </div>
-        <button>Lưu</button>
+  <!--Product detail page -->
+  <div class="detail-container">
+          <div class="detail-image">
+              <img src="./assets/img/productitem1.jpg" alt="Mô hình gỗ">
+   <div class="left-actions">
+    <div class="share-section">
+      <span>Chia sẻ:</span>
+      <div class="social-icons">
+          <a href="https://www.google.com/">
+              <img src="./assets/img/mess.jpg" alt="Messenger">
+          </a>
+          <a href="https://www.google.com/">
+              <img src="./assets/img/fb.jpg" alt="Facebook">
+          </a>
+          <a href="https://www.google.com/">
+              <img src="./assets/img/pin.jpg" alt="Pinterest">
+          </a>
+          <a href="https://www.google.com/">
+              <img src="./assets/img/twitter.jpg" alt="Twitter">
+          </a>
+          
       </div>
     </div>
-  </div>
-
-  <div class="top-products">
-  <h3>Top Sản Phẩm Nổi Bật</h3>
-  <div class="product-item">
-    <img src="./assets/img/topproduct.jpg" alt="Sản phẩm 1">
-    <div class="product-title">Robot Số Biến Hình BIBY Cho Bé Cỡ LỚN, Số Biến...</div>
-    <div class="product-price">₫38.000 - ₫175.000</div>
-  </div>
-  <div class="product-item">
-    <img src="./assets/img/topproduct2.jpg" alt="Sản phẩm 2">
-    <div class="product-title">Ô Tô Đồ Chơi Cho Bé 2 MÉT 3 Tầng 8 Xe Con và...</div>
-    <div class="product-price">₫285.000</div>
+    <div class="likes-count">
+      <svg width="20" height="20" fill="#ee4d2d" viewBox="0 0 24 24">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                 2 5.42 4.42 3 7.5 3c1.74 0 
+                 3.41.81 4.5 2.09C13.09 3.81 
+                 14.76 3 16.5 3 19.58 3 22 5.42 
+                 22 8.5c0 3.78-3.4 6.86-8.55 
+                 11.54L12 21.35z"></path>
+      </svg>
+      Đã thích (4k)
+    </div>
   </div>
   
-</div>
-
-</div>
-
-   
-   
-   
-
-</div>    
-
- <!-- Footer Section Shopee Style -->
-         <class="footer-section">
-           <div class="footer-container">
-             <!-- customer service -->
-             <div class="footer-col">
-               <h4>DỊCH VỤ KHÁCH HÀNG</h4>
-               <ul>
-                 <li><a href="#">Trung Tâm Trợ Giúp Shopee</a></li>
-                 <li><a href="#">Shopee Blog</a></li>
-                 <li><a href="#">Shopee Mall</a></li>
-                 <li><a href="#">Hướng Dẫn Mua Hàng/Đặt Hàng</a></li>
-                 <li><a href="#">Hướng Dẫn Bán Hàng</a></li>
-                 <li><a href="#">Ví ShopeePay</a></li>
-                 <li><a href="#">Shopee Xu</a></li>
-                 <li><a href="#">Đơn Hàng</a></li>
-                 <li><a href="#">Trả Hàng/Hoàn Tiền</a></li>
-                 <li><a href="#">Liên Hệ Shopee</a></li>
-                 <li><a href="#">Chính Sách Bảo Hành</a></li>
-               </ul>
-             </div>
-             <!-- Shopee Việt Nam -->
-             <div class="footer-col">
-               <h4>SHOPEE VIỆT NAM</h4>
-               <ul>
-                 <li><a href="#">Về Shopee</a></li>
-                 <li><a href="#">Tuyển Dụng</a></li>
-                 <li><a href="#">Điều Khoản Shopee</a></li>
-                 <li><a href="#">Chính Sách Bảo Mật</a></li>
-                 <li><a href="#">Shopee Mall</a></li>
-                 <li><a href="#">Kênh Người Bán</a></li>
-                 <li><a href="#">Flash Sale</a></li>
-                 <li><a href="#">Tiếp Thị Liên Kết</a></li>
-                 <li><a href="#">Liên Hệ Truyền Thông</a></li>
-               </ul>
-             </div>
-             <!-- Payment_+shipping -->
-             <div class="footer-col">
-               <h4>THANH TOÁN</h4>
-               <div class="payment-icons">
-                 <img src="https://down-vn.img.susercontent.com/file/d4bbea4570b93bfd5fc652ca82a262a8" alt="Visa" />
-                 <img src="https://down-vn.img.susercontent.com/file/a0a9062ebe19b45c1ae0506f16af5c16" alt="Mastercard" />
-                 <img src="https://down-vn.img.susercontent.com/file/38fd98e55806c3b2e4535c4e4a6c4c08" alt="JCB" />
-                 <img src="https://down-vn.img.susercontent.com/file/bc2a874caeee705449c164be385b796c" alt="Amex" />
-                 <img src="https://down-vn.img.susercontent.com/file/2c46b83d84111ddc32cfd3b5995d9281" alt="COD" />
-                 <img src="https://down-vn.img.susercontent.com/file/5e3f0bee86058637ff23cfdf2e14ca09" alt="Installment" />
-                 <img src="https://down-vn.img.susercontent.com/file/9263fa8c83628f5deff55e2a90758b06" alt="ShopeePay" />
-                 <img src="https://down-vn.img.susercontent.com/file/0217f1d345587aa0a300e69e2195c492" alt="ShopeePayLater" />
+          </div>
+          <div class="detail-products">
+              <div class="detail-header">
+                  <h1 class="product-title">Mô Hình Gỗ 3D BIBY An Toàn Nhiều Mẫu tự lắp ghép làm đồ trang trí phát triển trí tuệ và tăng tính kiên nhẫn</h1>
+              </div>
+              
+              <div class="detail-rating">
+                  <span class="rating-value">4.9</span>
+                  <span class="stars">
+                      <span class="stars">★★★★★</span>
+                  </span>
+                  <div class="rating-details">
+                      <span>2,8k Đánh Giá</span>
+                      <span>Đã Bán 10,2k</span>
+                      <span>Tổ cáo</span>
+                  </div>
+              </div>
+              
+              
+              <div class="price-section">
+                  <div class="current-price">475.000đ - 4.325.000đ</div>
+                  <div class="original-price">400.000đ - 4.375.000đ</div>
+                  <div class="discount">24%</div>
+              </div>
+              
+             <div class="shipping-info"> 
+      <div class="shipping-title">Vận Chuyển
+           
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#26AA99" fill-rule="evenodd" clip-rule="evenodd" d="M1.45831 4.16669C1.11314 4.16669 0.833313 4.44651 0.833313 4.79169V14.375C0.833313 14.7202 1.11314 15 1.45831 15H3.49183C3.57186 16.1052 4.49636 16.979 5.6207 16.979C6.74504 16.979 7.74983 16.1052 7.74983 15H12.0833C12.0867 15 13.2993 16.1054 14.2222 16.979H15.3481C16.097 16.979 16.7083 16.3677 16.7083 15.6188V13.1941C16.7083 12.9436 16.6077 12.7038 16.4306 12.5228L14.236 10.2602C14.0531 10.0737 13.7993 9.97244 13.5361 9.98434C13.2729 9.99624 13.0284 10.1192 12.8643 10.3236L11.8684 11.5325L10.5833 10.2437V6.66669H14.3061L16.9882 10.3521L17.4145 9.98418L14.4465 5.91669C14.2618 5.65406 13.9685 5.50002 13.6542 5.50002H10.4166V4.79169C10.4166 4.44651 10.1368 4.16669 9.79165 4.16669H1.45831ZM5.6207 15.3334C5.27852 15.3334 5.00002 15.0549 5.00002 14.7128C5.00002 14.3706 5.27852 14.0921 5.6207 14.0921C5.96289 14.0921 6.2414 14.3706 6.2414 14.7128C6.2414 15.0549 5.96289 15.3334 5.6207 15.3334Z"/>
+          </svg>
+          Nhận hàng 25 Th07 - 28 Th07 &gt;
+      
+      </div>
+     
+  </div>
+  
+  <div class="guarantee">
+      <p>
+             <span class="guarantee-title">An Tâm Mua<br>Sắm Cùng<br>Shopee</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path  fill=" #ee4d2d"  fill-rule="evenodd" clip-rule="evenodd" d="M10 0.833313L1.66669 4.16665V9.99998C1.66669 14.6024 5.02827 18.9021 10 19.1666C14.9718 18.9021 18.3334 14.6024 18.3334 9.99998V4.16665L10 0.833313ZM9.16669 14.1666L5.83335 10.8333L7.04169 9.62498L9.16669 11.75L13.5417 7.37498L14.75 8.58331L9.16669 14.1666Z"/>
+          </svg>
+         <span class="guarantee-content">Bảo hiểm Thiệt hại sản phẩm</span>
+      </p>
+     
+  </div>
+  
+              
+              <div class="variants-section">
+                  <div class="variants-title">Loại</div>
+                  <div class="variants-list">
+                      <div class="variant-item"><img src="./assets/img/owl.jpg" alt="">Cú mèo</div>
+                      <div class="variant-item"><img src="./assets/img/eiffle.jpg" alt="">Tháp Eiffle</div>
+                      <div class="variant-item"><img src="./assets/img/ship.jpg" alt="">Tàu Silk Merchant</div>
+                      <div class="variant-item"><img src="./assets/img/gate.jpg" alt="">Thiên An Môn</div>
+                      <div class="variant-item"><img src="./assets/img/windmill.jpg" alt="">Cối Xay Gió Holland</div>
+                  </div>
+              </div>
+              
+             <div class="detail-actions">
+  
+      <div class="quantity-section">
+          <span>Số Lượng</span>
+          <div class="quantity-control">
+              <button>-</button>
+              <input type="text" value="1">
+              <button>+</button>
+              {kho}sản phẩm có sẵn
+          </div>
+      </div>
+    <a href="https://www.google.com/">
+  
+      <div class="action-buttons">
+        <button class="add-to-cart">
+         <img src="./assets/img/shippingcard.jpg" alt="">
+          Thêm Vào Giỏ Hàng
+        </button>
+        <button class="buy-now">Mua Ngay</button>
+      </div>
+    </a>
+  
+  </div>
+  
+          </div>
+      </div>
+      
+      <div class="container">
+         <div class="shop-card">
+           <div class="shop-info">
+       <img src="./assets/img/bibyshop.jpg" alt="Biby Shop" class="shop-logo" />
+       <div class="shop-text">
+         <div class="shop-name">Đồ chơi BIBYSHOP</div>
+         <div class="shop-status">Online 2 Giờ Trước</div>
+         <div class="shop-actions">
+           <button class="btn chat"><i class="fas fa-comment"></i> Chat Ngay</button>
+           <button class="btn view-shop"><i class="fas fa-store"></i> Xem Shop</button>
+         </div>
+       </div>
+     </div>
+     
+         <div class="shop-details">
+       <div class="detail-row">
+         <div class="detail"><span>Đánh Giá</span><strong>10,2k</strong></div>
+         <div class="detail"><span>Tỉ Lệ Phản Hồi</span><strong>80%</strong></div>
+         <div class="detail"><span>Tham Gia</span><strong>3 năm trước</strong></div>
+       </div>
+       <div class="detail-row">
+         <div class="detail"><span>Sản Phẩm</span><strong>266</strong></div>
+         <div class="detail"><span>Thời Gian Phản Hồi</span><strong>trong vài giờ</strong></div>
+         <div class="detail"><span>Người Theo Dõi</span><strong>6,6k</strong></div>
+       </div>
+     </div>
+         </div>
+       </div>
+  
+  <div class="main-container">
+  <div class="left-content">
+  
+     
+       <div class="product-detail-box">
+       <div class="product-section">
+         <h3>CHI TIẾT SẢN PHẨM</h3>
+         <div class="product-detail-row">
+           <span>Danh Mục</span>
+           <span><a href="#">Shopee</a> > <a href="#">Đồ Chơi</a> > <a href="#">Đồ chơi giáo dục</a> > <a href="#">Đồ chơi xếp hình & xây dựng</a></span>
+         </div>
+         <div class="product-detail-row">
+           <span>Kho</span>
+           <span>1384</span>
+         </div>
+         <div class="product-detail-row">
+           <span>Chất liệu</span>
+           <span>Gỗ</span>
+         </div>
+         <div class="product-detail-row">
+           <span>Gửi từ</span>
+           <span>Hà Nội</span>
+         </div>
+       </div>
+     
+       <div class="product-section">
+         <h3>MÔ TẢ SẢN PHẨM</h3>
+         <p>
+           Bibyshop giới thiệu đến bạn một sản phẩm độc đáo và an toàn cho bé
+           <br>- Mô hình lắp ghép 3D bằng gỗ! 🌟
+           <br>🏗️ Với chất liệu gỗ ép cao cấp, mô hình lắp ghép 3D của chúng tôi đảm bảo an toàn khi bé tiếp xúc và sử dụng. Chất liệu gỗ tự nhiên không chỉ mang lại cảm giác chắc chắn và bền bỉ, mà còn giúp trẻ phát triển khả năng tư duy logic và khéo léo trong quá trình lắp ráp
+           <br>🎨 Với màu sắc trung tính bắt mắt, mô hình lắp ghép 3D của chúng tôi thích hợp cho cả bé trai và bé gái. Bạn có thể chọn từ những mô hình phong cảnh tự nhiên, những chiếc xe hoặc những con vật dễ thương. Mỗi chi tiết trên mô hình được gọt giũa tỉ mỉ, mang đến sự mềm mại và an toàn cho bé.
+           <br>🧩 Thiết kế mô hình lắp ghép 3D thông minh của chúng tôi không chỉ đáp ứng nhu cầu vui chơi và giải trí cho trẻ, mà còn giúp trẻ phát triển khả năng sáng tạo và tư duy không gian. Bé có thể tự tin khám phá và lắp ráp mô hình theo sở thích riêng, từ đó khám phá và học hỏi nhiều điều mới.
+           <br>⚙️ Kết cấu chắc chắn bền bỉ của mô hình lắp ghép 3D đảm bảo rằng sản phẩm sẽ tồn tại lâu dài và không bị hỏng hóc sau nhiều lần sử dụng. Bạn có thể yên tâm rằng mô hình sẽ là một trò chơi lâu dài và đáng giá cho bé.
+           <br>💡 Mô hình lắp ghép 3D bằng gỗ không chỉ là một món đồ chơi, mà còn là một công cụ giáo dục giúp trẻ phát triển khả năng tư duy, tăng cường sự sáng tạo và khám phá. Hãy tặng cho bé yêu của bạn một món quà thú vị và mang tính giáo dục, chắc chắn sẽ khiến bé vui và hạnh phúc.
+           <br>Quy định đổi trả hàng hóa :
+     
+     Khách hàng được trả hàng hóa theo quy định của Shopee
+     
+      Đổi trả trong vòn 15 ngày kể từ khi khách khiếu nại
+     
+     Điều kiện đổi trả:
+     
+     Sản phẩm còn nguyên tem mắc.
+     
+     Sản phẩm lỗi do bên Bibishop hoặc do quá trình vận chuyển.
+     
+     Tình trạng hàng hóa giao sai sản phẩm, giao sai mẫu mã.
+     
+     #binhnuoc #giunhiet #binhgiunhiet #binhnuocgiunhiet #500ml #binhnuocgiunhietmini #locklock #cute
+         </p>
+       </div>
+     </div>
+     <div class="review-box">
+       <h3>ĐÁNH GIÁ SẢN PHẨM</h3>
+       <div class="review-summary">
+         <div class="review-score">
+           <div class="score-number">4.8 <span>trên 5</span></div>
+           <div class="score-stars">★★★★★</div>
+         </div>
+         <div class="review-filters">
+           <button class="filter active">Tất Cả</button>
+           <button class="filter">5 Sao (589)</button>
+           <button class="filter">4 Sao (64)</button>
+           <button class="filter">3 Sao (15)</button>
+           <button class="filter">2 Sao (5)</button>
+           <button class="filter">1 Sao (13)</button>
+           <button class="filter">Có Bình Luận (298)</button>
+           <button class="filter">Có Hình Ảnh / Video (206)</button>
+         </div>
+       </div>
+       <div class="review-list">
+       <div class="review-item">
+         <div class="review-user">
+           <img src="./assets/img/avcmt.jpg" alt="avatar" class="user-avatar">
+           <div class="user-info">
+             <div class="user-name">abcd</div>
+             <div class="user-stars">★★★★★</div>
+             <div class="review-meta">2025-06-18 21:01 | Phân loại hàng: Cối xay gió lucky</div>
+           </div>
+         </div>
+         <div class="review-text">
+           Món đồ chơi vừa để trang trí rất đẹp, giao hàng nhanh, shiper chuyên nghiệp, sẽ mua thêm mô hình khác sau khi ghép xong hình này
+         </div>
+         <div class="review-images">
+           <img src="./assets/img/cmt.jpg" alt="ảnh review">
+           <img src="./assets/img/cmt2.jpg" alt="ảnh review">
+         </div>
+         <div class="shop-reply">
+           <strong>Phản Hồi Của Người Bán</strong>
+           <p>Cảm ơn bạn đã tin tưởng và ủng hộ BIBY. Phản hồi của bạn là động lực để shop hoàn thiện hơn mỗi ngày. Nếu bạn cần hỗ trợ, hãy ib ngay shop luôn sẵn sàng giải quyết mọi vấn đề.</p>
+         </div>
+         <div class="review-likes">
+           <span>👍 2</span>
+         </div>
+       </div>
+       <div class="review-item">
+         <div class="review-user">
+           <img src="./assets/img/avcmt.jpg" alt="avatar" class="user-avatar">
+           <div class="user-info">
+             <div class="user-name">abcd</div>
+             <div class="user-stars">★★★★★</div>
+             <div class="review-meta">2025-06-18 21:01 | Phân loại hàng: Cối xay gió lucky</div>
+           </div>
+         </div>
+         <div class="review-text">
+           Món đồ chơi vừa để trang trí rất đẹp, giao hàng nhanh, shiper chuyên nghiệp, sẽ mua thêm mô hình khác sau khi ghép xong hình này
+         </div>
+         <div class="review-images">
+           <img src="./assets/img/cmt.jpg" alt="ảnh review">
+           <img src="./assets/img/cmt2.jpg" alt="ảnh review">
+         </div>
+         <div class="shop-reply">
+           <strong>Phản Hồi Của Người Bán</strong>
+           <p>Cảm ơn bạn đã tin tưởng và ủng hộ BIBY. Phản hồi của bạn là động lực để shop hoàn thiện hơn mỗi ngày. Nếu bạn cần hỗ trợ, hãy ib ngay shop luôn sẵn sàng giải quyết mọi vấn đề.</p>
+         </div>
+         <div class="review-likes">
+           <span>👍 2</span>
+         </div>
+       </div>
+      <div class="pagination">
+    <button class="page-btn" disabled>&lt;</button>
+    <button class="page-btn active">1</button>
+    <button class="page-btn">2</button>
+    <button class="page-btn">3</button>
+    <button class="page-btn">4</button>
+    <button class="page-btn">5</button>
+    <span class="dots">...</span>
+    <button class="page-btn">&gt;</button>
+  </div>
+  
+     </div>
+     </div>
+  </div>
+  
+     
+     <div class="right-sidebar">
+    <div class="voucher-container">
+      <h3>Voucher của Shop</h3>
+      <div class="voucher-list">
+        <div class="voucher-item">
+          <div>
+            <strong>Giảm 3%</strong><br>
+            Đơn Tối Thiểu ₫70k<br>
+            Giảm tối đa ₫3k
+          </div>
+          <button>Lưu</button>
+        </div>
+        <div class="voucher-item">
+          <div>
+            <strong>Giảm ₫5k</strong><br>
+            Đơn Tối Thiểu ₫99k
+          </div>
+          <button>Lưu</button>
+        </div>
+        <div class="voucher-item">
+          <div>
+            <strong>Giảm ₫3k</strong><br>
+            Đơn Tối Thiểu ₫99k
+          </div>
+          <button>Lưu</button>
+        </div>
+        <div class="voucher-item">
+          <div>
+            <strong>Giảm ₫3k</strong><br>
+            Đơn Tối Thiểu ₫99k
+          </div>
+          <button>Lưu</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="top-products">
+    <h3>Top Sản Phẩm Nổi Bật</h3>
+    <div class="product-item">
+      <img src="./assets/img/topproduct.jpg" alt="Sản phẩm 1">
+      <div class="product-title">Robot Số Biến Hình BIBY Cho Bé Cỡ LỚN, Số Biến...</div>
+      <div class="product-price">₫38.000 - ₫175.000</div>
+    </div>
+    <div class="product-item">
+      <img src="./assets/img/topproduct2.jpg" alt="Sản phẩm 2">
+      <div class="product-title">Ô Tô Đồ Chơi Cho Bé 2 MÉT 3 Tầng 8 Xe Con và...</div>
+      <div class="product-price">₫285.000</div>
+    </div>
+    
+  </div>
+  </div>
+  </div>    
+  
+   <!-- Footer Section Shopee Style -->
+           <div class="footer-section">
+             <div class="footer-container">
+               <!-- customer service -->
+               <div class="footer-col">
+                 <h4>DỊCH VỤ KHÁCH HÀNG</h4>
+                 <ul>
+                   <li><a href="#">Trung Tâm Trợ Giúp Shopee</a></li>
+                   <li><a href="#">Shopee Blog</a></li>
+                   <li><a href="#">Shopee Mall</a></li>
+                   <li><a href="#">Hướng Dẫn Mua Hàng/Đặt Hàng</a></li>
+                   <li><a href="#">Hướng Dẫn Bán Hàng</a></li>
+                   <li><a href="#">Ví ShopeePay</a></li>
+                   <li><a href="#">Shopee Xu</a></li>
+                   <li><a href="#">Đơn Hàng</a></li>
+                   <li><a href="#">Trả Hàng/Hoàn Tiền</a></li>
+                   <li><a href="#">Liên Hệ Shopee</a></li>
+                   <li><a href="#">Chính Sách Bảo Hành</a></li>
+                 </ul>
                </div>
-               <h4>ĐƠN VỊ VẬN CHUYỂN</h4>
-               <div class="shipping-icons">
-                 <img src="https://down-vn.img.susercontent.com/file/vn-11134258-7ras8-m20rc1wk8926cf" alt="SPX" />
-                 <img src="https://down-vn.img.susercontent.com/file/vn-50009109-64f0b242486a67a3d29fd4bcf024a8c6" alt="GHN" />
-                 <img src="https://down-vn.img.susercontent.com/file/59270fb2f3fbb7cbc92fca3877edde3f" alt="ViettelPost" />
-                 <img src="https://down-vn.img.susercontent.com/file/957f4eec32b963115f952835c779cd2c" alt="VietnamPost" />
-                 <img src="https://down-vn.img.susercontent.com/file/0d349e22ca8d4337d11c9b134cf9fe63" alt="J&T Express" />
-                 <img src="https://down-vn.img.susercontent.com/file/3900aefbf52b1c180ba66e5ec91190e5" alt="GrabExpress" />
-                 <img src="https://down-vn.img.susercontent.com/file/6e3be504f08f88a15a28a9a447d94d3d" alt="NinjaVan" />
-                 <img src="https://down-vn.img.susercontent.com/file/0b3014da32de48c03340a4e4154328f6" alt="be" />
-                 <img src="https://down-vn.img.susercontent.com/file/vn-50009109-ec3ae587db6309b791b78eb8af6793fd" alt="Ahamove" />
+               <!-- Shopee Việt Nam -->
+               <div class="footer-col">
+                 <h4>SHOPEE VIỆT NAM</h4>
+                 <ul>
+                   <li><a href="#">Về Shopee</a></li>
+                   <li><a href="#">Tuyển Dụng</a></li>
+                   <li><a href="#">Điều Khoản Shopee</a></li>
+                   <li><a href="#">Chính Sách Bảo Mật</a></li>
+                   <li><a href="#">Shopee Mall</a></li>
+                   <li><a href="#">Kênh Người Bán</a></li>
+                   <li><a href="#">Flash Sale</a></li>
+                   <li><a href="#">Tiếp Thị Liên Kết</a></li>
+                   <li><a href="#">Liên Hệ Truyền Thông</a></li>
+                 </ul>
                </div>
-             </div>
-             <!-- fl shopee+ dowload -->
-             <div class="footer-col">
-               <h4>THEO DÕI SHOPEE</h4>
-               <ul>
-                 <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
-                 <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                 <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-               </ul>
-               <h4>TẢI ỨNG DỤNG SHOPEE</h4>
-               <div class="app-download">
-                 <img src="./assets/img/qrcode.png" alt="QR Code" class="qr"/>
-                 <div class="app-icons">
-                   <img src="./assets/img/appstore.png" alt="App Store" />
-                   <img src="./assets/img/ggplay.png" alt="Google Play" />
+               <!-- Payment_+shipping -->
+               <div class="footer-col">
+                 <h4>THANH TOÁN</h4>
+                 <div class="payment-icons">
+                   <img src="https://down-vn.img.susercontent.com/file/d4bbea4570b93bfd5fc652ca82a262a8" alt="Visa" />
+                   <img src="https://down-vn.img.susercontent.com/file/a0a9062ebe19b45c1ae0506f16af5c16" alt="Mastercard" />
+                   <img src="https://down-vn.img.susercontent.com/file/38fd98e55806c3b2e4535c4e4a6c4c08" alt="JCB" />
+                   <img src="https://down-vn.img.susercontent.com/file/bc2a874caeee705449c164be385b796c" alt="Amex" />
+                   <img src="https://down-vn.img.susercontent.com/file/2c46b83d84111ddc32cfd3b5995d9281" alt="COD" />
+                   <img src="https://down-vn.img.susercontent.com/file/5e3f0bee86058637ff23cfdf2e14ca09" alt="Installment" />
+                   <img src="https://down-vn.img.susercontent.com/file/9263fa8c83628f5deff55e2a90758b06" alt="ShopeePay" />
+                   <img src="https://down-vn.img.susercontent.com/file/0217f1d345587aa0a300e69e2195c492" alt="ShopeePayLater" />
+                 </div>
+                 <h4>ĐƠN VỊ VẬN CHUYỂN</h4>
+                 <div class="shipping-icons">
+                   <img src="https://down-vn.img.susercontent.com/file/vn-11134258-7ras8-m20rc1wk8926cf" alt="SPX" />
+                   <img src="https://down-vn.img.susercontent.com/file/vn-50009109-64f0b242486a67a3d29fd4bcf024a8c6" alt="GHN" />
+                   <img src="https://down-vn.img.susercontent.com/file/59270fb2f3fbb7cbc92fca3877edde3f" alt="ViettelPost" />
+                   <img src="https://down-vn.img.susercontent.com/file/957f4eec32b963115f952835c779cd2c" alt="VietnamPost" />
+                   <img src="https://down-vn.img.susercontent.com/file/0d349e22ca8d4337d11c9b134cf9fe63" alt="J&T Express" />
+                   <img src="https://down-vn.img.susercontent.com/file/3900aefbf52b1c180ba66e5ec91190e5" alt="GrabExpress" />
+                   <img src="https://down-vn.img.susercontent.com/file/6e3be504f08f88a15a28a9a447d94d3d" alt="NinjaVan" />
+                   <img src="https://down-vn.img.susercontent.com/file/0b3014da32de48c03340a4e4154328f6" alt="be" />
+                   <img src="https://down-vn.img.susercontent.com/file/vn-50009109-ec3ae587db6309b791b78eb8af6793fd" alt="Ahamove" />
+                 </div>
+               </div>
+               <!-- fl shopee+ dowload -->
+               <div class="footer-col">
+                 <h4>THEO DÕI SHOPEE</h4>
+                 <ul>
+                   <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
+                   <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                   <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                 </ul>
+                 <h4>TẢI ỨNG DỤNG SHOPEE</h4>
+                 <div class="app-download">
+                   <img src="./assets/img/qrcode.png" alt="QR Code" class="qr"/>
+                   <div class="app-icons">
+                     <img src="./assets/img/appstore.png" alt="App Store" />
+                     <img src="./assets/img/ggplay.png" alt="Google Play" />
+                   </div>
                  </div>
                </div>
              </div>
            </div>
-        </class>
+    
   
-
-<!--End section-->
-      <footer class="footer-section">
-  <div class="footer-links">
-    <a href="#" class="footer-link">CHÍNH SÁCH BẢO MẬT</a>
-    <a href="#" class="footer-link">QUY CHẾ HOẠT ĐỘNG</a>
-    <a href="#" class="footer-link">CHÍNH SÁCH VẬN CHUYỂN</a>
-    <a href="#" class="footer-link">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a>
-  </div>
-  <div class="footer-certificates">
-    <img src="./assets/img/logo1.jpg" alt="Đã đăng ký Bộ Công Thương" class="footer-certificate">
-    <img src="./assets/img/logo2.jpg" alt="Chứng nhận bảo mật" class="footer-certificate">
-  </div>
-  <div class="footer-info">
-    <p>Công ty TNHH Shopee</p>
-    <p>
-      Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam.
-      Chăm sóc khách hàng: Gọi tổng đài Shopee (miễn phí) hoặc Trò chuyện với Shopee ngay trên Trung tâm trợ giúp.
-    </p>
-    <p>
-      Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Bùi Anh Tuấn
-    </p>
-    <p>
-      Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch và Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015
-    </p>
-    <p>© 2015 - Bản quyền thuộc về Công ty TNHH Shopee</p>
-  </div>
-</footer>
-
-
-       
+  <!--End section-->
+        <footer class="footer-section">
+    <div class="footer-links">
+      <a href="#" class="footer-link">CHÍNH SÁCH BẢO MẬT</a>
+      <a href="#" class="footer-link">QUY CHẾ HOẠT ĐỘNG</a>
+      <a href="#" class="footer-link">CHÍNH SÁCH VẬN CHUYỂN</a>
+      <a href="#" class="footer-link">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a>
+    </div>
+    <div class="footer-certificates">
+      <img src="./assets/img/logo1.jpg" alt="Đã đăng ký Bộ Công Thương" class="footer-certificate">
+      <img src="./assets/img/logo2.jpg" alt="Chứng nhận bảo mật" class="footer-certificate">
+    </div>
+    <div class="footer-info">
+      <p>Công ty TNHH Shopee</p>
+      <p>
+        Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam.
+        Chăm sóc khách hàng: Gọi tổng đài Shopee (miễn phí) hoặc Trò chuyện với Shopee ngay trên Trung tâm trợ giúp.
+      </p>
+      <p>
+        Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Bùi Anh Tuấn
+      </p>
+      <p>
+        Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch và Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015
+      </p>
+      <p>© 2015 - Bản quyền thuộc về Công ty TNHH Shopee</p>
+    </div>
+  </footer>
+  
+  
+         
+</body>
+</html>

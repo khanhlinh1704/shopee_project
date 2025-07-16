@@ -1,159 +1,4 @@
-/* Footer section Shopee style */
-.footer-section {
-  margin-top: 80px;
-  padding: 80px 0 24px 0;
-  font-size: 14px;
-  color: #222;
-  border-top: 1px solid #eaeaea;
-  margin-left: 38px;
-}
 
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-/* main bar */
-.footer-col {
-  flex: none;
-}
-
-.footer-col:nth-child(1),
-.footer-col:nth-child(2) {
-  width: 200px;
-}
-
-.footer-col:nth-child(3) {
-  width: 290px;
-}
-
-.footer-col:nth-child(4) {
-  width: 210px;
-}
-
-/* title bar */
-.footer-col h4 {
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 14px;
-  text-transform: uppercase;
-}
-
-/* conection list */
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-col ul li {
-  margin-bottom: 8px;
-  line-height: 1.5;
-}
-
-.footer-col ul li a {
-  color: #555;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.footer-col ul li a:hover {
-  color: #ee4d2d;
-}
-
-/* Icon  */
-.footer-col ul li i {
-  font-size: 16px;
-  width: 20px;
-  margin-right: 6px;
-  color: #555;
-}
-
-/* payment & shipping */
-.payment-icons,
-.shipping-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 10px;
-  margin-bottom: 16px;
-}
-
-.payment-icons img,
-.shipping-icons img {
-  height: 26px;
-  width: 60px;
-  object-fit: contain;
-  border-radius: 4px;
-  border: 1px solid #ececec;
-  padding: 3px;
-  background: #fff;
-}
-
-.shipping-icons img {
-  width: 88px;
-}
-
-/* QR & App Store */
-.app-download {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-top: 6px;
-}
-
-.app-download .qr {
-  width: 90px;
-  height: 90px;
-  border-radius: 4px;
-  border: 1px solid #ececec;
-  background: #fff;
-  object-fit: cover;
-}
-
-.app-download .app-icons {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.app-download .app-icons img {
-  height: 28px;
-  width: 110px;
-  border-radius: 4px;
-  background: #fff;
-  border: 1px solid #ececec;
-  padding: 3px 6px;
-  object-fit: contain;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    gap: 30px;
-    padding: 0 16px;
-  }
-
-  .footer-col {
-    width: 100% !important;
-  }
-
-  .payment-icons,
-  .shipping-icons {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .app-download {
-    flex-direction: row;
-    align-items: center;
-  }
-}
 
 /* Breadcrumb styles */
 .breadcrumb {
@@ -456,7 +301,7 @@
   cursor: pointer;
   }
         
-.social-icons i {
+.social-icons img {
 width: 24px;
 height: 24px;
 cursor: pointer;
@@ -533,6 +378,12 @@ color: #666;
   border-radius: 2px;
   cursor: pointer;
   transition: all 0.2s;
+}
+
+.add-to-cart img {
+  width: 20px; 
+  height: 20px;
+  object-fit: contain;
 }
 
 .add-to-cart:hover {
@@ -899,6 +750,52 @@ color: #666;
   color: #666;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  background: #fff;
+}
+
+.page-btn {
+  border: none;
+  background: transparent;
+  color: #888;
+  font-size: 18px;
+  cursor: pointer;
+  min-width: 40px;
+  height: 40px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.page-btn:hover:not(.active) {
+  color: #ee4d2d;
+}
+
+.page-btn.active {
+  background: #ee4d2d;
+  color: #fff;
+}
+
+.page-btn:disabled {
+  color: #ccc;
+  cursor: default;
+}
+
+.dots {
+  color: #999;
+  font-size: 20px;
+}
+
+
 .detail-container,
 .container,
 .product-detail-box,
@@ -929,9 +826,11 @@ color: #666;
 .voucher-container {
   background: #fff;
   border-radius: 4px;
-  padding: 12px;
+  padding: 16px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   margin-bottom: 19px;
+  max-height: 400px; 
+  overflow-y: auto;
 }
 
 .voucher-container h3 {
@@ -945,6 +844,7 @@ color: #666;
   max-height: 400px;
   overflow-y: auto;
   padding-right: 5px; 
+  flex-direction: column;
 }
 
 .voucher-item {
