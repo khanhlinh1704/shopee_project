@@ -145,3 +145,34 @@ document.addEventListener("DOMContentLoaded", () => {
   window.showFirstRows = showFirstRows;
   window.showRemainingRows = showRemainingRows;
 });
+// Other products slider
+document.addEventListener("DOMContentLoaded", () => {
+  const listWrapper = document.querySelector(".carousel-wrapper");
+  const cards = document.querySelectorAll(".carousel-wrapper .product-card");
+  const cardWidth = cards[0].offsetWidth + 8; // 8px là margin-right
+  const visibleCards = 6;
+  const totalCards = cards.length;
+
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const offset = cardWidth * currentIndex;
+    listWrapper.style.transform = `translateX(-${offset}px)`;
+  }
+
+  window.showFirstRows = () => {
+    currentIndex = 0;
+    updateCarousel();
+  };
+
+  window.showRemainingRows = () => {
+    if (currentIndex + visibleCards < totalCards) {
+      currentIndex += visibleCards;
+    } else {
+      currentIndex = totalCards - visibleCards;
+    }
+    updateCarousel();
+  };
+});
+
+
