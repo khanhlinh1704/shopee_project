@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const listWrapper = document.querySelector(".carousel-wrapper");
   const cards = document.querySelectorAll(".carousel-wrapper .product-card");
-  const cardWidth = cards[0].offsetWidth + 8; // 8px là margin-right
+  const cardWidth = cards[0].offsetWidth + 8; 
   const visibleCards = 6;
   const totalCards = cards.length;
 
