@@ -2516,17 +2516,17 @@ ul {
     position: relative; 
     margin-top: 20px; 
     clear: both; 
-}
+}}
 
 /* End section*/
 .footer-section {
   background-color: #f5f5f5;
-  padding: 20px 0;
+  padding:  36px 0 24px 0;
   text-align: center;
   font-size: 14px;
   color: #666;
   line-height: 1.6;
-  clear: both;
+  
 }
 
 .footer-container, 
@@ -2537,26 +2537,35 @@ ul {
 
 .footer-links {
   margin-bottom: 16px;
+  flex-direction: column;
+  gap: 8px;
+  
 }
 
 .footer-link {
-  color: #666;
+  color: #757575;
   text-decoration: none;
-  margin: 0 12px;
-  font-size: 14px;
+  font-size: 12px;
+  padding: 8px 0;
+  position: relative;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  transition: color 0.2s;
 }
+
 
 .footer-link:hover {
   color: #d0011b;
 }
 
 .footer-certificates {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .footer-certificate {
-  height: 40px;
-  margin: 0 8px;
+  height: 70px;
+  margin: 0 12px;
+  vertical-align: middle;
 }
 
 .footer-info p {
@@ -2572,4 +2581,39 @@ ul {
   padding: 24px;
   margin:  0 auto;
   max-width: auto;
-}}
+}
+
+.footer-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-link:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 1px;
+  background: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .footer-section-inner {
+    max-width: 98vw;
+    padding: 0 8px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .footer-link {
+    padding: 8px 0;
+  }
+  .footer-link:not(:last-child)::after {
+    display: none;
+  }
+}
