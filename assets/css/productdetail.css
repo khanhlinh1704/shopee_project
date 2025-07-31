@@ -956,8 +956,9 @@ color: #666;
 
 .carousel-wrapper {
   display: flex;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
   will-change: transform;
+  overflow: hidden;
 }
 .other-products-btn {
   position: absolute;
@@ -1008,16 +1009,19 @@ color: #666;
   position: relative;
   width: 100%;
   padding-top: 100%;
-  overflow: hidden;
-  border-radius: 4px;
+  overflow: visible;
+  border-radius: 0;
 }
 
 .product-image img {
   position: absolute;
   top: 0; left: 0;
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   object-fit: cover;
+  left: -5%;
+  top: -5%;
+  border-radius: 0;
 }
 
 .discount-label {
@@ -1240,7 +1244,10 @@ color: #666;
 .related-box h4,
 .related-list,
 .related-tags {
-  margin-left: 76px; 
+  margin-left: 125px; 
+}
+.footer-sectionn{
+  background: #f5f5f5;
 }
 
 
