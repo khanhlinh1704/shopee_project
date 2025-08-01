@@ -146,53 +146,39 @@ document.addEventListener("DOMContentLoaded", () => {
   window.showRemainingRows = showRemainingRows;
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+
   // OTHER PRODUCTS CAROUSEL
-  const container = document.querySelector('.other-products-container');
-  if (!container) return;
-
-  const wrapper = container.querySelector('.carousel-wrapper');
-  const cards = wrapper.querySelectorAll('.product-card');
-  const leftBtn = container.querySelector('.left-btn');
-  const rightBtn = container.querySelector('.right-btn');
-
-  // Số sản phẩm hiển thị cùng lúc (tùy responsive, ở đây mặc định 6)
-  const visibleCount = 6;
-  const cardWidth = cards[0].offsetWidth + 8; // 8px là margin-right
+ document.addEventListener("DOMContentLoaded", () => {
+  const listWrapper = document.querySelector(".carousel-wrapper");
+  const cards = document.querySelectorAll(".carousel-wrapper .product-card");
+  const cardWidth = cards[0].offsetWidth + 8; // spacing 8px
+  const visibleCards = 6;
   const totalCards = cards.length;
   let currentIndex = 0;
 
   function updateCarousel() {
-    // Giới hạn chỉ lướt trong phạm vi sản phẩm
-    if (currentIndex < 0) currentIndex = 0;
-    if (currentIndex > totalCards - visibleCount) currentIndex = totalCards - visibleCount;
     const offset = cardWidth * currentIndex;
-    wrapper.style.transform = `translateX(-${offset}px)`;
-    wrapper.style.transition = 'transform 0.4s cubic-bezier(0.4,0,0.2,1)';
-    // Disable nút nếu ở đầu/cuối
-    leftBtn.disabled = currentIndex === 0;
-    rightBtn.disabled = currentIndex >= totalCards - visibleCount;
+    listWrapper.style.transform = `translateX(-${offset}px)`;
   }
 
-  rightBtn.addEventListener('click', function () {
-    if (currentIndex < totalCards - visibleCount) {
-      currentIndex++;
-      updateCarousel();
-    }
-  });
+  
+  const prevBtn = document.querySelector(".left-btn");
+  const nextBtn = document.querySelector(".right-btn");
 
-  leftBtn.addEventListener('click', function () {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
-  });
-
-  // Khởi tạo trạng thái ban đầu
-  updateCarousel();
-
-  // Responsive: cập nhật lại khi resize
-  window.addEventListener('resize', function () {
+  prevBtn.addEventListener("click", () => {
+    currentIndex = 0;
     updateCarousel();
   });
+
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex + visibleCards < totalCards) {
+      currentIndex += visibleCards;
+    } else {
+      currentIndex = totalCards - visibleCards;
+    }
+    updateCarousel();
+  });
+
+  updateCarousel();
 });
+
