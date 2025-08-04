@@ -2365,7 +2365,7 @@ ul {
 
 /* Footer Shopee */
 .footer-section{
-    background-color: #f5f5f5;
+    background:#fff;
 }
 .footer-container {
   max-width: 1200px;
@@ -2541,8 +2541,10 @@ ul {
 
 .footer-links {
   margin-bottom: 16px;
-  flex-direction: column;
-  gap: 8px;
+  gap: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
 }
 
@@ -2550,11 +2552,13 @@ ul {
   color: #757575;
   text-decoration: none;
   font-size: 12px;
-  padding: 8px 0;
+  padding: 8px 40px;
   position: relative;
   font-weight: 400;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.3px;
   transition: color 0.2s;
+  background: none;
+  border: none;
 }
 
 
@@ -2622,4 +2626,28 @@ ul {
   }
 }
 
+
+.footer-bottom-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0 32px 0;
+  background: #fff;
+  font-size: 15px;
+  color: #666;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-text {
+  padding: 0 24px;
+  white-space: nowrap;
+}
+
+.footer-bottom-divider {
+  width: 1px;
+  height: 18px;
+  background: #e0e0e0;
+  display: inline-block;
+}
 

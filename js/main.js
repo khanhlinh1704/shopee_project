@@ -148,37 +148,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // OTHER PRODUCTS CAROUSEL
- document.addEventListener("DOMContentLoaded", () => {
-  const listWrapper = document.querySelector(".carousel-wrapper");
-  const cards = document.querySelectorAll(".carousel-wrapper .product-card");
-  const cardWidth = cards[0].offsetWidth + 8; // spacing 8px
-  const visibleCards = 6;
-  const totalCards = cards.length;
-  let currentIndex = 0;
+ document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector('.other-products-container');
+  if (!container) return;
 
-  function updateCarousel() {
-    const offset = cardWidth * currentIndex;
-    listWrapper.style.transform = `translateX(-${offset}px)`;
-  }
+  const wrapper = container.querySelector('.carousel-wrapper');
+  const cards = wrapper.querySelectorAll('.product-card');
+  const leftBtn = container.querySelector('.left-btn');
+  const rightBtn = container.querySelector('.right-btn');
 
   
-  const prevBtn = document.querySelector(".left-btn");
-  const nextBtn = document.querySelector(".right-btn");
+  function getVisibleCount() {
+    if (window.innerWidth < 600) return 2;
+    if (window.innerWidth < 900) return 4;
+    return 6;
+  }
 
-  prevBtn.addEventListener("click", () => {
-    currentIndex = 0;
-    updateCarousel();
-  });
+  let currentIndex = 0;
 
-  nextBtn.addEventListener("click", () => {
-    if (currentIndex + visibleCards < totalCards) {
-      currentIndex += visibleCards;
-    } else {
-      currentIndex = totalCards - visibleCards;
+  function getCardWidth() {
+   
+    const card = cards[0];
+    if (!card) return 0;
+    const style = window.getComputedStyle(card);
+    const marginRight = parseInt(style.marginRight) || 0;
+    return card.offsetWidth + marginRight;
+  }
+
+  function updateCarousel() {
+    const visibleCount = getVisibleCount();
+    const cardWidth = getCardWidth();
+   
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > totalCards - visibleCount) currentIndex = totalCards - visibleCount;
+    const offset = cardWidth * currentIndex;
+    wrapper.style.transform = `translateX(-${offset}px)`;
+    
+    leftBtn.disabled = currentIndex === 0;
+    rightBtn.disabled = currentIndex >= totalCards - visibleCount;
+  }
+
+  rightBtn.addEventListener('click', function () {
+    const visibleCount = getVisibleCount();
+    const totalCards = cards.length;
+    if (currentIndex < totalCards - visibleCount) {
+      currentIndex++;
+      updateCarousel();
     }
-    updateCarousel();
   });
 
-  updateCarousel();
-});
+  leftBtn.addEventListener('click', function () {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
 
+  // Khởi tạo
+  updateCarousel();
+  window.addEventListener('resize', updateCarousel);
+});
