@@ -167,9 +167,7 @@ html{
     display: none;
     z-index: 2;
 }
-.select-input__item {
 
-}
 .select-input__link {
     text-decoration: none;
     color: var(--text-color);

@@ -786,33 +786,40 @@ font-weight: 400;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+ 
 }
 
 /* Navigation buttons */
 .brand-logo-prev,
 .brand-logo-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
+   position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    width: 40px;
+    height: 40px;
+    background: #ffffff6d;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s, background 0.2s;
+    font-size: 10px;
+    color: #757575;
+    outline: none;
+    padding: 0;
+ 
 }
 
 .brand-logo-prev {
-  left: -20px; 
+  left: 5px; 
 }
 
 .brand-logo-next {
-  right: -20px; 
+  right: 5px; 
 }
 .brand-logo-grid {
   display: grid;
