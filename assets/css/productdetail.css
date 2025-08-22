@@ -1,5 +1,4 @@
 
-
 /* Breadcrumb styles */
 .breadcrumb {
   font-size: 14px;
@@ -29,7 +28,7 @@
 
 .breadcrumb-current {
   color: #333; 
-  font-weight: 400;
+  font-weight: 100;
 }
 /* Product detail page styles */
 
@@ -76,28 +75,29 @@
     height:450px;;
         }
         
-        .detail-products {
-            flex: 1;
-            padding: 0 20px;
+ .detail-products {
+flex: 1;
+padding: 0 20px;
+        }
+
+ .detail-header {
+margin-bottom: 15px;
         }
         
-        .detail-header {
-            margin-bottom: 15px;
+  .new-tag {
+display: inline-block;
+background-color: #ee4d2d;
+color: white;
+padding: 3px 8px;
+border-radius: 4px;
+font-size: 12px;
+font-weight: bold;
+margin-bottom: 5px;
         }
         
-        .new-tag {
-            display: inline-block;
-            background-color: #ee4d2d;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .detail-title {
-            font-size: 24px;
+        .product-title {
+            font-size: 17px;
+            font-weight: thin;
             color: #333;
             margin-bottom: 15px;
         }
@@ -283,15 +283,15 @@
     border-top: 1px dashed #e5e5e5;
     }
 
-    .left-actions {
+.left-actions {
    width: 96%;
-    margin: 0 auto;
-    margin-top: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-    padding: 10px 0;
+  margin: 0 auto;
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 10px 0;
     }
         
   .share-section {
@@ -600,10 +600,9 @@ color: #666;
 .review-box {
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
     margin-left: 140px;
     background: #fff;
-    border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
@@ -617,21 +616,23 @@ color: #666;
 }
 
 .review-box h3 {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  justify-self: start;
+  align-items: center;
 }
 
 .review-summary {
   background: #fff7f5;
   border: 1px solid #fee2dc;
-  border-radius: 4px;
-  padding: 16px;
+  padding: 25px;
   display: flex;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin: 0 10px; 
+  margin: 25px 10px; 
 }
 
 .review-score {
@@ -650,7 +651,7 @@ color: #666;
 .score-number span {
   font-size: 16px;
   font-weight: normal;
-  color: #333;
+  color:  #ee4d2d;
 }
 
 .score-stars {

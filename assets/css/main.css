@@ -169,7 +169,7 @@
 }
 
 .heder-navbar-item::after {
-     content: "";
+    content: "";
     display: block;
     position: absolute;
     width: 2px;
@@ -1213,7 +1213,6 @@ a{
 .header-contact {
     background-color: #f53d2d;
     height: 4px;
-    margin-top: 90px;
 }
 
 .header-bar {
@@ -1223,23 +1222,23 @@ a{
 
 .content {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 55px auto 20px;
     padding: 0 50px;
-    font-size: 14x; 
+    font-size: 12px; 
     line-height: 1.8;
 }
 
 h2 {
     color: #333;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 15px;
 } 
 
 h3 {
     color: #333;
     margin-top: 20px;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 a {
@@ -1258,8 +1257,9 @@ ul {
     line-height: 1.8;
 }
 .sponsor-container h2 {
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 .sponsor-container span {
    font-size: 9px;
@@ -2600,8 +2600,7 @@ body {
 
 .header-contact-box {
   background: #fff;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-  padding: 24px;
+  padding: 0;
   margin:  0 auto;
   max-width: auto;
 }
