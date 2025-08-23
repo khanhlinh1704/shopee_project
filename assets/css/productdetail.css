@@ -611,17 +611,15 @@ color: #666;
   margin-left: 140px;
   color: #333;
   background: #fff;
-  margin-bottom: 0;       
+  margin-bottom: 0;     
   padding-bottom: 21px; 
 }
 
 .review-box h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
-  margin-bottom: 25px;
-  margin-top: 25px;
-  justify-self: start;
-  align-items: center;
+  margin: 16px 0 10px 20px;
+  padding-top: 25px;
 }
 
 .review-summary {
@@ -632,14 +630,18 @@ color: #666;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin: 25px 10px; 
+  margin: 25px 25px;
+  flex-wrap: wrap;  
+  width: 1150px;
+  height: 145px;
 }
 
 .review-score {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 100px;
+  min-width: 120px;
+  margin-right: 50px;
 }
 
 .score-number {
@@ -680,8 +682,9 @@ color: #666;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  width: 100%;
+  width: 780px;
   justify-content: flex-start;
+  flex-grow: 1;
 }
 
 .filter {
@@ -907,11 +910,11 @@ color: #666;
 }
 
 .product-name {
-  margin: 8px 0 4px;
-  font-size: 13px;
+  margin: 5px 0 4px;
+  font-size: 17px;
   color: #333;
-  line-height: 1.2;
-  max-height: 2.8em; 
+  line-height: 0.4;
+  max-height: 15px; 
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
