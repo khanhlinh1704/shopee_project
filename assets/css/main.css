@@ -8,8 +8,6 @@
   z-index: 1000; 
 }
 
-
-
 .header__navbar{
     display: flex;
     justify-content: space-between;  
@@ -986,8 +984,9 @@ a{
   background: #fff;
   box-shadow: 0 2px 16px rgba(0,0,0,0.08);
   padding: 24px 24px 0 24px;
-  margin: 0 auto;
-  max-width: auto
+  margin:0 auto;
+  max-width: auto;
+  margin-top: 120px;
 }
 
 .banner-carousel {
